@@ -29,6 +29,8 @@
 		DCDB3B1A250E3E9E0055B1D9 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B19250E3E9E0055B1D9 /* CGRect+Extension.swift */; };
 		DCDB3B1C250E3F880055B1D9 /* ShutterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B1B250E3F880055B1D9 /* ShutterButton.swift */; };
 		DCDB3B1E250E3FCC0055B1D9 /* FocusRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B1D250E3FCC0055B1D9 /* FocusRectangleView.swift */; };
+		DCDB3B20250E3FF90055B1D9 /* QuadrilateralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B1F250E3FF90055B1D9 /* QuadrilateralView.swift */; };
+		DCDB3B22250E401E0055B1D9 /* EditScanCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B21250E401E0055B1D9 /* EditScanCornerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		DCDB3B19250E3E9E0055B1D9 /* CGRect+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
 		DCDB3B1B250E3F880055B1D9 /* ShutterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterButton.swift; sourceTree = "<group>"; };
 		DCDB3B1D250E3FCC0055B1D9 /* FocusRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusRectangleView.swift; sourceTree = "<group>"; };
+		DCDB3B1F250E3FF90055B1D9 /* QuadrilateralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrilateralView.swift; sourceTree = "<group>"; };
+		DCDB3B21250E401E0055B1D9 /* EditScanCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScanCornerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */,
 				DCDB3B1B250E3F880055B1D9 /* ShutterButton.swift */,
 				DCDB3B1D250E3FCC0055B1D9 /* FocusRectangleView.swift */,
+				DCDB3B1F250E3FF90055B1D9 /* QuadrilateralView.swift */,
+				DCDB3B21250E401E0055B1D9 /* EditScanCornerView.swift */,
 				DCDB3AF7250E2EA30055B1D9 /* Quadrilateral.swift */,
 				DCDB3B05250E393F0055B1D9 /* CameraScannerScan.swift */,
 				DCDB3B07250E39960055B1D9 /* CameraScannerResults.swift */,
@@ -261,11 +267,13 @@
 				DCDB3AFE250E30980055B1D9 /* CornerPosition.swift in Sources */,
 				DCDB3B06250E393F0055B1D9 /* CameraScannerScan.swift in Sources */,
 				DCDB3B16250E3DD50055B1D9 /* AddResult.swift in Sources */,
+				DCDB3B20250E3FF90055B1D9 /* QuadrilateralView.swift in Sources */,
 				DCDB3AF8250E2EA30055B1D9 /* Quadrilateral.swift in Sources */,
 				DCDB3B1C250E3F880055B1D9 /* ShutterButton.swift in Sources */,
 				DCDB3B02250E383F0055B1D9 /* UIImage+Extension.swift in Sources */,
 				DCDB3B14250E3D8A0055B1D9 /* CIRectangleDetector.swift in Sources */,
 				DCDB3B18250E3E420055B1D9 /* CGImagePropertyOrientation+Extension.swift in Sources */,
+				DCDB3B22250E401E0055B1D9 /* EditScanCornerView.swift in Sources */,
 				DCDB3B04250E38990055B1D9 /* CGSize+Extension.swift in Sources */,
 				DCDB3B1A250E3E9E0055B1D9 /* CGRect+Extension.swift in Sources */,
 				DCDB3B1E250E3FCC0055B1D9 /* FocusRectangleView.swift in Sources */,
