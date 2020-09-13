@@ -28,6 +28,7 @@
 		DCDB3B18250E3E420055B1D9 /* CGImagePropertyOrientation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B17250E3E420055B1D9 /* CGImagePropertyOrientation+Extension.swift */; };
 		DCDB3B1A250E3E9E0055B1D9 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B19250E3E9E0055B1D9 /* CGRect+Extension.swift */; };
 		DCDB3B1C250E3F880055B1D9 /* ShutterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B1B250E3F880055B1D9 /* ShutterButton.swift */; };
+		DCDB3B1E250E3FCC0055B1D9 /* FocusRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B1D250E3FCC0055B1D9 /* FocusRectangleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		DCDB3B17250E3E420055B1D9 /* CGImagePropertyOrientation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+Extension.swift"; sourceTree = "<group>"; };
 		DCDB3B19250E3E9E0055B1D9 /* CGRect+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
 		DCDB3B1B250E3F880055B1D9 /* ShutterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterButton.swift; sourceTree = "<group>"; };
+		DCDB3B1D250E3FCC0055B1D9 /* FocusRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusRectangleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */,
 				DCDB3B1B250E3F880055B1D9 /* ShutterButton.swift */,
+				DCDB3B1D250E3FCC0055B1D9 /* FocusRectangleView.swift */,
 				DCDB3AF7250E2EA30055B1D9 /* Quadrilateral.swift */,
 				DCDB3B05250E393F0055B1D9 /* CameraScannerScan.swift */,
 				DCDB3B07250E39960055B1D9 /* CameraScannerResults.swift */,
@@ -265,6 +268,7 @@
 				DCDB3B18250E3E420055B1D9 /* CGImagePropertyOrientation+Extension.swift in Sources */,
 				DCDB3B04250E38990055B1D9 /* CGSize+Extension.swift in Sources */,
 				DCDB3B1A250E3E9E0055B1D9 /* CGRect+Extension.swift in Sources */,
+				DCDB3B1E250E3FCC0055B1D9 /* FocusRectangleView.swift in Sources */,
 				DCDB3AFC250E30130055B1D9 /* CGPoint+Extension.swift in Sources */,
 				DCDB3B0C250E3B1C0055B1D9 /* CaptureDevice.swift in Sources */,
 				DCDB3B00250E31280055B1D9 /* CGAffineTransform+Extension.swift in Sources */,
