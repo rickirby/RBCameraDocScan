@@ -152,30 +152,30 @@ extension UIImage {
 		return image
 	}
 	
-	func withFixedOrientation() -> UIImage {
-		var imageAngle: Double = 0.0
-		
-		var shouldRotate = true
-		switch CaptureSession.current.editImageOrientation {
-		case .up:
-			shouldRotate = false
-		case .left:
-			imageAngle = Double.pi / 2
-		case .right:
-			imageAngle = -(Double.pi / 2)
-		case .down:
-			imageAngle = Double.pi
-		default:
-			shouldRotate = false
-		}
-		
-		if shouldRotate,
-			let finalImage = rotated(by: Measurement(value: imageAngle, unit: .radians)) {
-			return finalImage
-		} else {
-			return self
-		}
-	}
+//	func withFixedOrientation() -> UIImage {
+//		var imageAngle: Double = 0.0
+//
+//		var shouldRotate = true
+//		switch CaptureSession.current.editImageOrientation {
+//		case .up:
+//			shouldRotate = false
+//		case .left:
+//			imageAngle = Double.pi / 2
+//		case .right:
+//			imageAngle = -(Double.pi / 2)
+//		case .down:
+//			imageAngle = Double.pi
+//		default:
+//			shouldRotate = false
+//		}
+//
+//		if shouldRotate,
+//			let finalImage = rotated(by: Measurement(value: imageAngle, unit: .radians)) {
+//			return finalImage
+//		} else {
+//			return self
+//		}
+//	}
 	
 	func createThumbnail() -> UIImage? {
 		var result: UIImage? = nil
