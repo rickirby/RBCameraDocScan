@@ -23,6 +23,7 @@
 		DCDB3B0C250E3B1C0055B1D9 /* CaptureDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B0B250E3B1C0055B1D9 /* CaptureDevice.swift */; };
 		DCDB3B10250E3BBC0055B1D9 /* VisionRectangleDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B0F250E3BBC0055B1D9 /* VisionRectangleDetector.swift */; };
 		DCDB3B12250E3CD40055B1D9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B11250E3CD40055B1D9 /* Error.swift */; };
+		DCDB3B14250E3D8A0055B1D9 /* CIRectangleDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B13250E3D8A0055B1D9 /* CIRectangleDetector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		DCDB3B0B250E3B1C0055B1D9 /* CaptureDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureDevice.swift; sourceTree = "<group>"; };
 		DCDB3B0F250E3BBC0055B1D9 /* VisionRectangleDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionRectangleDetector.swift; sourceTree = "<group>"; };
 		DCDB3B11250E3CD40055B1D9 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		DCDB3B13250E3D8A0055B1D9 /* CIRectangleDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIRectangleDetector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				DCDB3B0B250E3B1C0055B1D9 /* CaptureDevice.swift */,
 				DCDB3AFD250E30980055B1D9 /* CornerPosition.swift */,
 				DCDB3B0F250E3BBC0055B1D9 /* VisionRectangleDetector.swift */,
+				DCDB3B13250E3D8A0055B1D9 /* CIRectangleDetector.swift */,
 				DCDB3B11250E3CD40055B1D9 /* Error.swift */,
 				DCDB3AFB250E30130055B1D9 /* CGPoint+Extension.swift */,
 				DCDB3AFF250E31280055B1D9 /* CGAffineTransform+Extension.swift */,
@@ -244,6 +247,7 @@
 				DCDB3B06250E393F0055B1D9 /* CameraScannerScan.swift in Sources */,
 				DCDB3AF8250E2EA30055B1D9 /* Quadrilateral.swift in Sources */,
 				DCDB3B02250E383F0055B1D9 /* UIImage+Extension.swift in Sources */,
+				DCDB3B14250E3D8A0055B1D9 /* CIRectangleDetector.swift in Sources */,
 				DCDB3B04250E38990055B1D9 /* CGSize+Extension.swift in Sources */,
 				DCDB3AFC250E30130055B1D9 /* CGPoint+Extension.swift in Sources */,
 				DCDB3B0C250E3B1C0055B1D9 /* CaptureDevice.swift in Sources */,
