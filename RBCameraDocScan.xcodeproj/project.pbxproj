@@ -31,6 +31,7 @@
 		DCDB3B1E250E3FCC0055B1D9 /* FocusRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B1D250E3FCC0055B1D9 /* FocusRectangleView.swift */; };
 		DCDB3B20250E3FF90055B1D9 /* QuadrilateralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B1F250E3FF90055B1D9 /* QuadrilateralView.swift */; };
 		DCDB3B22250E401E0055B1D9 /* EditScanCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B21250E401E0055B1D9 /* EditScanCornerView.swift */; };
+		DCDB3B24250E40920055B1D9 /* CaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B23250E40920055B1D9 /* CaptureSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		DCDB3B1D250E3FCC0055B1D9 /* FocusRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusRectangleView.swift; sourceTree = "<group>"; };
 		DCDB3B1F250E3FF90055B1D9 /* QuadrilateralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrilateralView.swift; sourceTree = "<group>"; };
 		DCDB3B21250E401E0055B1D9 /* EditScanCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScanCornerView.swift; sourceTree = "<group>"; };
+		DCDB3B23250E40920055B1D9 /* CaptureSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,10 +116,11 @@
 			isa = PBXGroup;
 			children = (
 				DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */,
+				DCDB3B23250E40920055B1D9 /* CaptureSession.swift */,
 				DCDB3B1B250E3F880055B1D9 /* ShutterButton.swift */,
 				DCDB3B1D250E3FCC0055B1D9 /* FocusRectangleView.swift */,
-				DCDB3B1F250E3FF90055B1D9 /* QuadrilateralView.swift */,
 				DCDB3B21250E401E0055B1D9 /* EditScanCornerView.swift */,
+				DCDB3B1F250E3FF90055B1D9 /* QuadrilateralView.swift */,
 				DCDB3AF7250E2EA30055B1D9 /* Quadrilateral.swift */,
 				DCDB3B05250E393F0055B1D9 /* CameraScannerScan.swift */,
 				DCDB3B07250E39960055B1D9 /* CameraScannerResults.swift */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCDB3B08250E39960055B1D9 /* CameraScannerResults.swift in Sources */,
+				DCDB3B24250E40920055B1D9 /* CaptureSession.swift in Sources */,
 				DCDB3AFA250E2F430055B1D9 /* Transformable.swift in Sources */,
 				DCDB3B0A250E39C90055B1D9 /* RectangleDetectorResult.swift in Sources */,
 				DCDB3B12250E3CD40055B1D9 /* Error.swift in Sources */,
