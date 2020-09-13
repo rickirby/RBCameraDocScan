@@ -10,6 +10,8 @@
 		DCDB3AE7250E28F60055B1D9 /* RBCameraDocScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDB3ADD250E28F60055B1D9 /* RBCameraDocScan.framework */; };
 		DCDB3AEC250E28F60055B1D9 /* RBCameraDocScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AEB250E28F60055B1D9 /* RBCameraDocScanTests.swift */; };
 		DCDB3AEE250E28F60055B1D9 /* RBCameraDocScan.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCDB3AF8250E2EA30055B1D9 /* Quadrilateral.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AF7250E2EA30055B1D9 /* Quadrilateral.swift */; };
+		DCDB3AFA250E2F430055B1D9 /* Transformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AF9250E2F430055B1D9 /* Transformable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		DCDB3AE6250E28F60055B1D9 /* RBCameraDocScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RBCameraDocScanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDB3AEB250E28F60055B1D9 /* RBCameraDocScanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBCameraDocScanTests.swift; sourceTree = "<group>"; };
 		DCDB3AED250E28F60055B1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCDB3AF7250E2EA30055B1D9 /* Quadrilateral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quadrilateral.swift; sourceTree = "<group>"; };
+		DCDB3AF9250E2F430055B1D9 /* Transformable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */,
+				DCDB3AF7250E2EA30055B1D9 /* Quadrilateral.swift */,
+				DCDB3AF9250E2F430055B1D9 /* Transformable.swift */,
 				DCDB3AE1250E28F60055B1D9 /* Info.plist */,
 			);
 			path = RBCameraDocScan;
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					DCDB3ADC250E28F60055B1D9 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					DCDB3AE5250E28F60055B1D9 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -195,6 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDB3AFA250E2F430055B1D9 /* Transformable.swift in Sources */,
+				DCDB3AF8250E2EA30055B1D9 /* Quadrilateral.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +349,7 @@
 		DCDB3AF2250E28F60055B1D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6NMANHT3A2;
@@ -359,6 +369,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -367,6 +378,7 @@
 		DCDB3AF3250E28F60055B1D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6NMANHT3A2;
@@ -394,6 +406,7 @@
 		DCDB3AF5250E28F60055B1D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6NMANHT3A2;
 				INFOPLIST_FILE = RBCameraDocScanTests/Info.plist;
@@ -412,6 +425,7 @@
 		DCDB3AF6250E28F60055B1D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6NMANHT3A2;
 				INFOPLIST_FILE = RBCameraDocScanTests/Info.plist;
