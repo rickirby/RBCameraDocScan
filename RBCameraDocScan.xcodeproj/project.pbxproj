@@ -15,6 +15,7 @@
 		DCDB3AFC250E30130055B1D9 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AFB250E30130055B1D9 /* CGPoint+Extension.swift */; };
 		DCDB3AFE250E30980055B1D9 /* CornerPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AFD250E30980055B1D9 /* CornerPosition.swift */; };
 		DCDB3B00250E31280055B1D9 /* CGAffineTransform+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AFF250E31280055B1D9 /* CGAffineTransform+Extension.swift */; };
+		DCDB3B02250E383F0055B1D9 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B01250E383F0055B1D9 /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		DCDB3AFB250E30130055B1D9 /* CGPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
 		DCDB3AFD250E30980055B1D9 /* CornerPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerPosition.swift; sourceTree = "<group>"; };
 		DCDB3AFF250E31280055B1D9 /* CGAffineTransform+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGAffineTransform+Extension.swift"; sourceTree = "<group>"; };
+		DCDB3B01250E383F0055B1D9 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				DCDB3AFD250E30980055B1D9 /* CornerPosition.swift */,
 				DCDB3AFB250E30130055B1D9 /* CGPoint+Extension.swift */,
 				DCDB3AFF250E31280055B1D9 /* CGAffineTransform+Extension.swift */,
+				DCDB3B01250E383F0055B1D9 /* UIImage+Extension.swift */,
 				DCDB3AE1250E28F60055B1D9 /* Info.plist */,
 			);
 			path = RBCameraDocScan;
@@ -214,6 +217,7 @@
 				DCDB3AFA250E2F430055B1D9 /* Transformable.swift in Sources */,
 				DCDB3AFE250E30980055B1D9 /* CornerPosition.swift in Sources */,
 				DCDB3AF8250E2EA30055B1D9 /* Quadrilateral.swift in Sources */,
+				DCDB3B02250E383F0055B1D9 /* UIImage+Extension.swift in Sources */,
 				DCDB3AFC250E30130055B1D9 /* CGPoint+Extension.swift in Sources */,
 				DCDB3B00250E31280055B1D9 /* CGAffineTransform+Extension.swift in Sources */,
 			);
