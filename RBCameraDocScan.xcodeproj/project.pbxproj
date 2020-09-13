@@ -24,6 +24,7 @@
 		DCDB3B10250E3BBC0055B1D9 /* VisionRectangleDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B0F250E3BBC0055B1D9 /* VisionRectangleDetector.swift */; };
 		DCDB3B12250E3CD40055B1D9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B11250E3CD40055B1D9 /* Error.swift */; };
 		DCDB3B14250E3D8A0055B1D9 /* CIRectangleDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B13250E3D8A0055B1D9 /* CIRectangleDetector.swift */; };
+		DCDB3B16250E3DD50055B1D9 /* AddResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B15250E3DD50055B1D9 /* AddResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		DCDB3B0F250E3BBC0055B1D9 /* VisionRectangleDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionRectangleDetector.swift; sourceTree = "<group>"; };
 		DCDB3B11250E3CD40055B1D9 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		DCDB3B13250E3D8A0055B1D9 /* CIRectangleDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIRectangleDetector.swift; sourceTree = "<group>"; };
+		DCDB3B15250E3DD50055B1D9 /* AddResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				DCDB3B0F250E3BBC0055B1D9 /* VisionRectangleDetector.swift */,
 				DCDB3B13250E3D8A0055B1D9 /* CIRectangleDetector.swift */,
 				DCDB3B11250E3CD40055B1D9 /* Error.swift */,
+				DCDB3B15250E3DD50055B1D9 /* AddResult.swift */,
 				DCDB3AFB250E30130055B1D9 /* CGPoint+Extension.swift */,
 				DCDB3AFF250E31280055B1D9 /* CGAffineTransform+Extension.swift */,
 				DCDB3B03250E38990055B1D9 /* CGSize+Extension.swift */,
@@ -245,6 +248,7 @@
 				DCDB3B10250E3BBC0055B1D9 /* VisionRectangleDetector.swift in Sources */,
 				DCDB3AFE250E30980055B1D9 /* CornerPosition.swift in Sources */,
 				DCDB3B06250E393F0055B1D9 /* CameraScannerScan.swift in Sources */,
+				DCDB3B16250E3DD50055B1D9 /* AddResult.swift in Sources */,
 				DCDB3AF8250E2EA30055B1D9 /* Quadrilateral.swift in Sources */,
 				DCDB3B02250E383F0055B1D9 /* UIImage+Extension.swift in Sources */,
 				DCDB3B14250E3D8A0055B1D9 /* CIRectangleDetector.swift in Sources */,
