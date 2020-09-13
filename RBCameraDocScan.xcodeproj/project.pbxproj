@@ -21,6 +21,7 @@
 		DCDB3B08250E39960055B1D9 /* CameraScannerResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B07250E39960055B1D9 /* CameraScannerResults.swift */; };
 		DCDB3B0A250E39C90055B1D9 /* RectangleDetectorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B09250E39C90055B1D9 /* RectangleDetectorResult.swift */; };
 		DCDB3B0C250E3B1C0055B1D9 /* CaptureDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B0B250E3B1C0055B1D9 /* CaptureDevice.swift */; };
+		DCDB3B10250E3BBC0055B1D9 /* VisionRectangleDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B0F250E3BBC0055B1D9 /* VisionRectangleDetector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		DCDB3B07250E39960055B1D9 /* CameraScannerResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScannerResults.swift; sourceTree = "<group>"; };
 		DCDB3B09250E39C90055B1D9 /* RectangleDetectorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleDetectorResult.swift; sourceTree = "<group>"; };
 		DCDB3B0B250E3B1C0055B1D9 /* CaptureDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureDevice.swift; sourceTree = "<group>"; };
+		DCDB3B0F250E3BBC0055B1D9 /* VisionRectangleDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionRectangleDetector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				DCDB3AF9250E2F430055B1D9 /* Transformable.swift */,
 				DCDB3B0B250E3B1C0055B1D9 /* CaptureDevice.swift */,
 				DCDB3AFD250E30980055B1D9 /* CornerPosition.swift */,
+				DCDB3B0F250E3BBC0055B1D9 /* VisionRectangleDetector.swift */,
 				DCDB3AFB250E30130055B1D9 /* CGPoint+Extension.swift */,
 				DCDB3AFF250E31280055B1D9 /* CGAffineTransform+Extension.swift */,
 				DCDB3B03250E38990055B1D9 /* CGSize+Extension.swift */,
@@ -232,6 +235,7 @@
 				DCDB3B08250E39960055B1D9 /* CameraScannerResults.swift in Sources */,
 				DCDB3AFA250E2F430055B1D9 /* Transformable.swift in Sources */,
 				DCDB3B0A250E39C90055B1D9 /* RectangleDetectorResult.swift in Sources */,
+				DCDB3B10250E3BBC0055B1D9 /* VisionRectangleDetector.swift in Sources */,
 				DCDB3AFE250E30980055B1D9 /* CornerPosition.swift in Sources */,
 				DCDB3B06250E393F0055B1D9 /* CameraScannerScan.swift in Sources */,
 				DCDB3AF8250E2EA30055B1D9 /* Quadrilateral.swift in Sources */,
