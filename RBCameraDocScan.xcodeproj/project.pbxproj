@@ -12,6 +12,7 @@
 		DCDB3AEE250E28F60055B1D9 /* RBCameraDocScan.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DCDB3AF8250E2EA30055B1D9 /* Quadrilateral.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AF7250E2EA30055B1D9 /* Quadrilateral.swift */; };
 		DCDB3AFA250E2F430055B1D9 /* Transformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AF9250E2F430055B1D9 /* Transformable.swift */; };
+		DCDB3AFC250E30130055B1D9 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AFB250E30130055B1D9 /* CGPoint+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		DCDB3AED250E28F60055B1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCDB3AF7250E2EA30055B1D9 /* Quadrilateral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quadrilateral.swift; sourceTree = "<group>"; };
 		DCDB3AF9250E2F430055B1D9 /* Transformable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformable.swift; sourceTree = "<group>"; };
+		DCDB3AFB250E30130055B1D9 /* CGPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */,
 				DCDB3AF7250E2EA30055B1D9 /* Quadrilateral.swift */,
 				DCDB3AF9250E2F430055B1D9 /* Transformable.swift */,
+				DCDB3AFB250E30130055B1D9 /* CGPoint+Extension.swift */,
 				DCDB3AE1250E28F60055B1D9 /* Info.plist */,
 			);
 			path = RBCameraDocScan;
@@ -204,6 +207,7 @@
 			files = (
 				DCDB3AFA250E2F430055B1D9 /* Transformable.swift in Sources */,
 				DCDB3AF8250E2EA30055B1D9 /* Quadrilateral.swift in Sources */,
+				DCDB3AFC250E30130055B1D9 /* CGPoint+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
