@@ -16,11 +16,17 @@ public protocol RBCameraViewControllerDelegate {
 
 public class RBCameraViewController: UIViewController {
 	
+	// MARK: - Public Properties
+	
 	public var delegate: RBCameraViewControllerDelegate?
 	
-	var screenView: RBCameraView {
+	// MARK: - Private Properties
+	
+	private var screenView: RBCameraView {
 		return view as! RBCameraView
 	}
+	
+	// MARK: - Life Cycle
 	
 	public override func loadView() {
 		super.loadView()
@@ -38,7 +44,9 @@ public class RBCameraViewController: UIViewController {
 		screenView.onViewDidLayoutSubviews()
 	}
 	
-	func configureViewEvent() {
+	// MARK: - Private Methods
+	
+	private func configureViewEvent() {
 		screenView.onViewEvent = { [weak self] (event: RBCameraView.ViewEvent) in
 			switch event {
 				
