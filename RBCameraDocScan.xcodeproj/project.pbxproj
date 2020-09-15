@@ -14,6 +14,7 @@
 		DC64B6212510A54100327BCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC64B61F2510A54100327BCD /* Main.storyboard */; };
 		DC64B6232510A54200327BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC64B6222510A54200327BCD /* Assets.xcassets */; };
 		DC64B6262510A54200327BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC64B6242510A54200327BCD /* LaunchScreen.storyboard */; };
+		DC64B62C2510BAA900327BCD /* RBCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B62B2510BAA900327BCD /* RBCameraView.swift */; };
 		DCDB3AE7250E28F60055B1D9 /* RBCameraDocScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDB3ADD250E28F60055B1D9 /* RBCameraDocScan.framework */; };
 		DCDB3AEC250E28F60055B1D9 /* RBCameraDocScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AEB250E28F60055B1D9 /* RBCameraDocScanTests.swift */; };
 		DCDB3AEE250E28F60055B1D9 /* RBCameraDocScan.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -65,6 +66,7 @@
 		DC64B6222510A54200327BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC64B6252510A54200327BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC64B6272510A54200327BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC64B62B2510BAA900327BCD /* RBCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBCameraView.swift; sourceTree = "<group>"; };
 		DCDB3ADD250E28F60055B1D9 /* RBCameraDocScan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RBCameraDocScan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBCameraDocScan.h; sourceTree = "<group>"; };
 		DCDB3AE1250E28F60055B1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */,
 				DC64B5F32510A2D500327BCD /* RBCameraViewController.swift */,
+				DC64B62B2510BAA900327BCD /* RBCameraView.swift */,
 				DCDB3B23250E40920055B1D9 /* CaptureSession.swift */,
 				DCDB3B25250E40EB0055B1D9 /* CaptureSessionManager.swift */,
 				DCDB3B27250E41140055B1D9 /* RectangleFeaturesFunnel.swift */,
@@ -360,6 +363,7 @@
 				DCDB3AFA250E2F430055B1D9 /* Transformable.swift in Sources */,
 				DCDB3B0A250E39C90055B1D9 /* RectangleDetectorResult.swift in Sources */,
 				DCDB3B12250E3CD40055B1D9 /* Error.swift in Sources */,
+				DC64B62C2510BAA900327BCD /* RBCameraView.swift in Sources */,
 				DCDB3B10250E3BBC0055B1D9 /* VisionRectangleDetector.swift in Sources */,
 				DCDB3AFE250E30980055B1D9 /* CornerPosition.swift in Sources */,
 				DCDB3B06250E393F0055B1D9 /* CameraScannerScan.swift in Sources */,
