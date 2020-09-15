@@ -8,6 +8,6 @@
 
 import UIKit
 
-class RBCameraViewController: ViewController<RBCameraView> {
+public class RBCameraViewController: UIViewController {
 	
 }
