@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension CGAffineTransform {
+public extension CGAffineTransform {
 	
 	static func scaleTransform(forSize fromSize: CGSize, aspectFillInSize toSize: CGSize) -> CGAffineTransform {
 		let scale = max(toSize.width / fromSize.width, toSize.height / fromSize.height)

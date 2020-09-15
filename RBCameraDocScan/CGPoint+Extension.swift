@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension CGPoint {
+public extension CGPoint {
 	
 	func surroundingSquare(withSize size: CGFloat) -> CGRect {
 		return CGRect(x: x - size / 2.0, y: y - size / 2.0, width: size, height: size)

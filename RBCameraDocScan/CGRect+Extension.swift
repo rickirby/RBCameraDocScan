@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension CGRect {
+public extension CGRect {
 	
 	func scaleAndCenter(withRatio ratio: CGFloat) -> CGRect {
 		let scaleTransform = CGAffineTransform(scaleX: ratio, y: ratio)
