@@ -34,7 +34,8 @@ public class RBCameraViewController: UIViewController {
 		screenView.onViewEvent = { [weak self] (event: RBCameraView.ViewEvent) in
 			switch event {
 				
-			case .didTapCapture:
+			case .capture:
+//				self.captureSessionManager?.capturePhoto()
 				print("Tap Capture")
 			case .didTapCancel:
 				print("Tap Cancel")

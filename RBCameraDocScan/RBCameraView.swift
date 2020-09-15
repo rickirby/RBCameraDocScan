@@ -12,7 +12,7 @@ import AVFoundation
 class RBCameraView: UIView {
 	
 	enum ViewEvent {
-		case didTapCapture
+		case capture
 		case didTapCancel
 		case didTapImagePick
 		case setFlash(AVCaptureDevice.TorchMode)
@@ -340,11 +340,49 @@ class RBCameraView: UIView {
 			})
 		}
 	}
+	
+	func captureImage() {
+		if currentFlashState == .on {
+			onViewEvent?(.setFlash(.on))
+			DispatchQueue.main.asyncAfter(deadline: (DispatchTime.now() + 0.75)) {
+				self.flashView.isHidden = false
+				self.captureButton.isUserInteractionEnabled = false
+				UIView.animate(withDuration: 0.08, animations: {
+					self.flashView.alpha = 1
+				}, completion: { _ in
+					UIView.animate(withDuration: 0.08, animations: {
+						self.flashView.alpha = 0
+					}, completion: { _ in
+						self.flashView.isHidden = true
+						self.captureButton.isUserInteractionEnabled = true
+						self.activityIndicator.startAnimating()
+					})
+				})
+				self.onViewEvent?(.capture)
+			}
+		}
+		else {
+			flashView.isHidden = false
+			captureButton.isUserInteractionEnabled = false
+			UIView.animate(withDuration: 0.08, animations: {
+				self.flashView.alpha = 1
+			}, completion: { _ in
+				UIView.animate(withDuration: 0.08, animations: {
+					self.flashView.alpha = 0
+				}, completion: { _ in
+					self.flashView.isHidden = true
+					self.captureButton.isUserInteractionEnabled = true
+					self.activityIndicator.startAnimating()
+				})
+			})
+			onViewEvent?(.capture)
+		}
+	}
 }
 
 extension RBCameraView {
 	@objc func captureButtonTapped() {
-		onViewEvent?(.didTapCapture)
+		captureImage()
 	}
 	
 	@objc func cancelButtonTapped() {
