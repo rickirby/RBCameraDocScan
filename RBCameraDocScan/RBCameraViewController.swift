@@ -64,6 +64,14 @@ public class RBCameraViewController: UIViewController {
 		NotificationCenter.default.addObserver(self, selector: #selector(onDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
 	}
 	
+	public override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
+		if screenView.currentFlashState == .torch && device.torchMode == .off {
+			CaptureSession.current.setFlash(into: .on)
+		}
+	}
+	
 	public override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 		screenView.onViewDidLayoutSubviews()
