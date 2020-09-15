@@ -8,15 +8,15 @@
 
 import UIKit
 
+protocol RBCameraViewControllerDelegate {
+	func gotCapturedPicture(image: UIImage, quad: Quadrilateral?)
+	func didTapCancel()
+	func didTapImagePick()
+}
+
 public class RBCameraViewController: UIViewController {
 	
-	public enum NavigationEvent {
-		case gotCapturedPicture(image: UIImage, quad: Quadrilateral?)
-		case didTapCancel
-		case didTapImagePick
-	}
-	
-	public var onNavigationEvent: ((NavigationEvent) -> Void)?
+	var delegate: RBCameraViewControllerDelegate?
 	
 	var screenView: RBCameraView {
 		return view as! RBCameraView
@@ -46,9 +46,9 @@ public class RBCameraViewController: UIViewController {
 //				self.captureSessionManager?.capturePhoto()
 				print("Tap Capture")
 			case .didTapCancel:
-				self?.onNavigationEvent?(.didTapCancel)
+				self?.delegate?.didTapCancel()
 			case .didTapImagePick:
-				self?.onNavigationEvent?(.didTapImagePick)
+				self?.delegate?.didTapImagePick()
 			case .setFlash(let state):
 				CaptureSession.current.setFlash(into: state)
 			case .toggleAutomatic:
