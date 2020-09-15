@@ -10,6 +10,12 @@ import UIKit
 
 public class RBCameraViewController: UIViewController {
 	
+	public enum NavigationEvent {
+		case gotCapturedPicture(image: UIImage, quad: Quadrilateral?)
+		case didTapCancel
+		case didTapImagePick
+	}
+	
 	var screenView: RBCameraView {
 		return view as! RBCameraView
 	}
