@@ -124,6 +124,32 @@ public class RBCameraViewController: UIViewController {
 	}
 }
 
+extension RBCameraViewController {
+	public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		super.touchesBegan(touches, with: event)
+		guard  let touch = touches.first else { return }
+		let touchPoint = touch.location(in: screenView)
+		
+		if touchPoint.y > screenView.topMaskView.frame.height && touchPoint.y < screenView.bottomMaskView.frame.origin.y {
+			let convertedTouchPoint: CGPoint = screenView.videoPreviewLayer.captureDevicePointConverted(fromLayerPoint: touchPoint)
+			
+			CaptureSession.current.removeFocusRectangleIfNeeded(screenView.focusRectangle, animated: false)
+			
+			screenView.focusRectangle = FocusRectangleView(touchPoint: touchPoint)
+			screenView.addSubview(screenView.focusRectangle)
+			
+			do {
+				try CaptureSession.current.setFocusPointToTapPoint(convertedTouchPoint)
+			} catch {
+				let error = CameraScannerControllerError.inputDevice
+				guard let captureSessionManager = captureSessionManager else { return }
+				captureSessionManager.delegate?.captureSessionManager(captureSessionManager, didFailWithError: error)
+				return
+			}
+		}
+	}
+}
+
 extension RBCameraViewController: RectangleDetectionDelegateProtocol {
 	func didStartCapturingPicture(for captureSessionManager: CaptureSessionManager) {
 		
