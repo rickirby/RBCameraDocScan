@@ -279,12 +279,10 @@ class RBCameraView: UIView {
 		case .on:
 			currentFlashState = .torch
 			onViewEvent?(.setFlash(.on))
-//			CaptureSession.current.setFlash(into: .on)
 			break
 		case .torch:
 			currentFlashState = .off
 			onViewEvent?(.setFlash(.off))
-//			CaptureSession.current.setFlash(into: .off)
 			break
 		}
 		
