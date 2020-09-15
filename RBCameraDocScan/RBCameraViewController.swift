@@ -95,7 +95,6 @@ public class RBCameraViewController: UIViewController {
 				
 			case .capture:
 				self?.captureSessionManager?.capturePhoto()
-				print("Tap Capture")
 			case .didTapCancel:
 				self?.delegate?.didTapCancel()
 			case .didTapImagePick:
@@ -162,18 +161,39 @@ extension RBCameraViewController {
 
 extension RBCameraViewController: RectangleDetectionDelegateProtocol {
 	func didStartCapturingPicture(for captureSessionManager: CaptureSessionManager) {
-		
+		captureSessionManager.stop()
+		screenView.captureButton.isUserInteractionEnabled = false
 	}
 	
 	func captureSessionManager(_ captureSessionManager: CaptureSessionManager, didDetectQuad quad: Quadrilateral?, _ imageSize: CGSize) {
-		
+		guard let quad = quad else {
+			screenView.quadView.removeQuadrilateral()
+			return
+		}
+		let portraitImageSize = CGSize(width: imageSize.height, height: imageSize.width)
+		let scaleTransform = CGAffineTransform.scaleTransform(forSize: portraitImageSize, aspectFillInSize: screenView.quadView.bounds.size)
+		let scaledImageSize = imageSize.applying(scaleTransform)
+		let rotationTransform = CGAffineTransform(rotationAngle: CGFloat.pi / 2.0)
+		let imageBounds = CGRect(origin: .zero, size: scaledImageSize).applying(rotationTransform)
+		let translationTransform = CGAffineTransform.translateTransform(fromCenterOfRect: imageBounds, toCenterOfRect: screenView.quadView.bounds)
+		let transforms = [scaleTransform, rotationTransform, translationTransform]
+		let transformedQuad = quad.applyTransforms(transforms)
+		screenView.quadView.drawQuadrilateral(quad: transformedQuad, animated: true)
 	}
 	
 	func captureSessionManager(_ captureSessionManager: CaptureSessionManager, didCapturePicture picture: UIImage, withQuad quad: Quadrilateral?) {
+		screenView.activityIndicator.stopAnimating()
+		screenView.captureButton.isUserInteractionEnabled = true
 		
+		if screenView.currentFlashState == .on {
+			CaptureSession.current.setFlash(into: .off)
+		}
+		
+		delegate?.gotCapturedPicture(image: picture, quad: quad)
 	}
 	
 	func captureSessionManager(_ captureSessionManager: CaptureSessionManager, didFailWithError error: Error) {
-		
+		screenView.activityIndicator.stopAnimating()
+		screenView.captureButton.isUserInteractionEnabled = true
 	}
 }
