@@ -267,6 +267,10 @@ class RBCameraView: UIView {
 		])
 	}
 	
+	func onViewWillAppear() {
+		quadView.removeQuadrilateral()
+	}
+	
 	func onViewDidLayoutSubviews() {
 		videoPreviewLayer.frame = previewView.layer.bounds
 	}

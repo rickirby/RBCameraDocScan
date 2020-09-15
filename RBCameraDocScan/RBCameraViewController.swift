@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 public protocol RBCameraViewControllerDelegate {
 	func gotCapturedPicture(image: UIImage, quad: Quadrilateral?)
@@ -47,6 +48,22 @@ public class RBCameraViewController: UIViewController {
 		configureCaptureSessionManager()
 	}
 	
+	public override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		screenView.onViewWillAppear()
+		
+		navigationController?.setNavigationBarHidden(true, animated: animated)
+		navigationController?.setToolbarHidden(true, animated: true)
+		navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+		
+		CaptureSession.current.isEditing = false
+		captureSessionManager?.start()
+		UIApplication.shared.isIdleTimerDisabled = true
+		
+		NotificationCenter.default.addObserver(self, selector: #selector(subjectAreaDidChange), name: Notification.Name.AVCaptureDeviceSubjectAreaDidChange, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(onDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+	}
+	
 	public override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 		screenView.onViewDidLayoutSubviews()
@@ -76,6 +93,26 @@ public class RBCameraViewController: UIViewController {
 	private func configureCaptureSessionManager() {
 		captureSessionManager = CaptureSessionManager(videoPreviewLayer: screenView.videoPreviewLayer)
 		captureSessionManager?.delegate = self
+	}
+	
+	@objc func onDidBecomeActive() {
+		guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
+		if screenView.currentFlashState == .torch && device.torchMode == .off {
+			CaptureSession.current.setFlash(into: .on)
+		}
+	}
+	
+	@objc private func subjectAreaDidChange() {
+		do {
+			try CaptureSession.current.resetFocusToAuto()
+		} catch {
+			let error = CameraScannerControllerError.inputDevice
+			guard let captureSessionManager = captureSessionManager else { return }
+			captureSessionManager.delegate?.captureSessionManager(captureSessionManager, didFailWithError: error)
+			return
+		}
+		
+		CaptureSession.current.removeFocusRectangleIfNeeded(screenView.focusRectangle, animated: true)
 	}
 }
 
