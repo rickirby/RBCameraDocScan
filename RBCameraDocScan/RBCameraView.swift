@@ -15,7 +15,7 @@ class RBCameraView: UIView {
 		case didTapCapture
 		case didTapCancel
 		case didTapImagePick
-		case didTapFlash
+		case setFlash(AVCaptureDevice.TorchMode)
 		case didTapAutomatic
 	}
 	
@@ -270,6 +270,56 @@ class RBCameraView: UIView {
 	func onViewDidLayoutSubviews() {
 		videoPreviewLayer.frame = previewView.layer.bounds
 	}
+	
+	func toggleFlash() {
+		switch currentFlashState {
+		case .off:
+			currentFlashState = .on
+			break
+		case .on:
+			currentFlashState = .torch
+			onViewEvent?(.setFlash(.on))
+//			CaptureSession.current.setFlash(into: .on)
+			break
+		case .torch:
+			currentFlashState = .off
+			onViewEvent?(.setFlash(.off))
+//			CaptureSession.current.setFlash(into: .off)
+			break
+		}
+		
+		setFlashButtonImage(into: currentFlashState)
+	}
+	
+	func setFlashButtonImage(into state: FlashState) {
+		switch state {
+		case .off:
+			flashButton.setImage(UIImage(named: "FlashOffButton"), for: .normal)
+			UIView.animate(withDuration: 0.25, animations: {
+				self.currentFlashView.alpha = 0
+				self.currentFlashView.isHidden = true
+			})
+			break
+		case .on:
+			flashButton.setImage(UIImage(named: "FlashOnButton")?.withRenderingMode(.alwaysTemplate), for: .normal)
+			flashButton.tintColor = UIColor(red: 255/255, green: 214/255, blue: 10/255, alpha: 1)
+			UIView.animate(withDuration: 0.25, animations: {
+				self.currentFlashImageView.image = UIImage(named: "FlashOnButton")?.withRenderingMode(.alwaysTemplate)
+				self.currentFlashView.alpha = 1
+				self.currentFlashView.isHidden = false
+			})
+			break
+		case .torch:
+			flashButton.setImage(UIImage(named: "TorchButton")?.withRenderingMode(.alwaysTemplate), for: .normal)
+			flashButton.tintColor = UIColor(red: 255/255, green: 214/255, blue: 10/255, alpha: 1)
+			UIView.animate(withDuration: 0.25, animations: {
+				self.currentFlashImageView.image = UIImage(named: "TorchButton")?.withRenderingMode(.alwaysTemplate)
+				self.currentFlashView.alpha = 1
+				self.currentFlashView.isHidden = false
+			})
+			break
+		}
+	}
 }
 
 extension RBCameraView {
@@ -286,7 +336,7 @@ extension RBCameraView {
 	}
 	
 	@objc func flashButtonTapped() {
-		onViewEvent?(.didTapFlash)
+		toggleFlash()
 	}
 	
 	@objc func automaticButtonTapped() {
