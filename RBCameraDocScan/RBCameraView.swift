@@ -26,6 +26,7 @@ class RBCameraView: UIView {
 	}
 	
 	var onViewEvent: ((ViewEvent) -> Void)?
+	var currentFlashState: FlashState = .off
 	
 	let videoPreviewLayer = AVCaptureVideoPreviewLayer()
 	var focusRectangle: FocusRectangleView!
