@@ -21,8 +21,8 @@ public class RBCameraViewController: UIViewController {
 	public var delegate: RBCameraViewControllerDelegate?
 	
 	public override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+		return .lightContent
+	}
 	
 	// MARK: - Private Properties
 	
@@ -42,7 +42,9 @@ public class RBCameraViewController: UIViewController {
 	public override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		modalPresentationStyle = .fullScreen
 		configureViewEvent()
+		configureCaptureSessionManager()
 	}
 	
 	public override func viewDidLayoutSubviews() {
@@ -57,7 +59,7 @@ public class RBCameraViewController: UIViewController {
 			switch event {
 				
 			case .capture:
-//				self.captureSessionManager?.capturePhoto()
+				self?.captureSessionManager?.capturePhoto()
 				print("Tap Capture")
 			case .didTapCancel:
 				self?.delegate?.didTapCancel()
@@ -69,5 +71,10 @@ public class RBCameraViewController: UIViewController {
 				CaptureSession.current.isAutoScanEnabled.toggle()
 			}
 		}
+	}
+	
+	private func configureCaptureSessionManager() {
+		captureSessionManager = CaptureSessionManager(videoPreviewLayer: screenView.videoPreviewLayer)
+//		captureSessionManager?.delegate = self
 	}
 }
