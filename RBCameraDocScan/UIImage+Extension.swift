@@ -102,10 +102,14 @@ public extension UIImage {
 	}
 	
 	struct RotationOptions: OptionSet {
-		let rawValue: Int
+		public let rawValue: Int
 		
 		static let flipOnVerticalAxis = RotationOptions(rawValue: 1)
 		static let flipOnHorizontalAxis = RotationOptions(rawValue: 2)
+		
+		public init(rawValue: Int) {
+			self.rawValue = rawValue
+		}
 	}
 	
 	func applyingPortraitOrientation() -> UIImage {
@@ -151,29 +155,4 @@ public extension UIImage {
 		
 		return image
 	}
-	
-//	func withFixedOrientation() -> UIImage {
-//		var imageAngle: Double = 0.0
-//
-//		var shouldRotate = true
-//		switch CaptureSession.current.editImageOrientation {
-//		case .up:
-//			shouldRotate = false
-//		case .left:
-//			imageAngle = Double.pi / 2
-//		case .right:
-//			imageAngle = -(Double.pi / 2)
-//		case .down:
-//			imageAngle = Double.pi
-//		default:
-//			shouldRotate = false
-//		}
-//
-//		if shouldRotate,
-//			let finalImage = rotated(by: Measurement(value: imageAngle, unit: .radians)) {
-//			return finalImage
-//		} else {
-//			return self
-//		}
-//	}
 }

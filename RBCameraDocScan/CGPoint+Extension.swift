@@ -26,7 +26,7 @@ public extension CGPoint {
 		return hypot((self.x - point.x), (self.y - point.y))
 	}
 	
-	func closestCornerFrom(quad: Quadrilateral) -> CornerPosition {
+	internal func closestCornerFrom(quad: Quadrilateral) -> CornerPosition {
 		var smallestDistance = distanceTo(point: quad.topLeft)
 		var closestCorner = CornerPosition.topLeft
 		
