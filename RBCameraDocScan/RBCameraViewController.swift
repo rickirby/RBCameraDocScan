@@ -16,6 +16,8 @@ public class RBCameraViewController: UIViewController {
 		case didTapImagePick
 	}
 	
+	public var onNavigationEvent: ((NavigationEvent) -> Void)?
+	
 	var screenView: RBCameraView {
 		return view as! RBCameraView
 	}
