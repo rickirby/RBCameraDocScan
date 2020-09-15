@@ -16,7 +16,7 @@ class RBCameraView: UIView {
 		case didTapCancel
 		case didTapImagePick
 		case setFlash(AVCaptureDevice.TorchMode)
-		case didTapAutomatic
+		case toggleAutomatic
 	}
 	
 	enum FlashState {
@@ -290,7 +290,7 @@ class RBCameraView: UIView {
 	}
 	
 	func toggleAutomatic() {
-//		CaptureSession.current.isAutoScanEnabled.toggle()
+		onViewEvent?(.toggleAutomatic)
 		setAutomaticButton(into: CaptureSession.current.isAutoScanEnabled)
 	}
 	
@@ -360,6 +360,6 @@ extension RBCameraView {
 	}
 	
 	@objc func automaticButtonTapped() {
-		onViewEvent?(.didTapAutomatic)
+		toggleAutomatic()
 	}
 }

@@ -42,8 +42,8 @@ public class RBCameraViewController: UIViewController {
 				print("Tap Image Pick")
 			case .setFlash(let state):
 				CaptureSession.current.setFlash(into: state)
-			case .didTapAutomatic:
-				print("Tap Automatic")
+			case .toggleAutomatic:
+				CaptureSession.current.isAutoScanEnabled.toggle()
 			}
 		}
 	}
