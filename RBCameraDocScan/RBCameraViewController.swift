@@ -19,8 +19,32 @@ public class RBCameraViewController: UIViewController {
 		view = RBCameraView()
 	}
 	
+	public override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		configureViewEvent()
+	}
+	
 	public override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 		screenView.onViewDidLayoutSubviews()
+	}
+	
+	func configureViewEvent() {
+		screenView.onViewEvent = { [weak self] (event: RBCameraView.ViewEvent) in
+			switch event {
+				
+			case .didTapCapture:
+				print("Tap Capture")
+			case .didTapCancel:
+				print("Tap Cancel")
+			case .didTapImagePick:
+				print("Tap Image Pick")
+			case .setFlash(let state):
+				CaptureSession.current.setFlash(into: state)
+			case .didTapAutomatic:
+				print("Tap Automatic")
+			}
+		}
 	}
 }
