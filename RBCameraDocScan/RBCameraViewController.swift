@@ -77,6 +77,16 @@ public class RBCameraViewController: UIViewController {
 		screenView.onViewDidLayoutSubviews()
 	}
 	
+	public override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		
+		navigationController?.setNavigationBarHidden(false, animated: animated)
+		UIApplication.shared.isIdleTimerDisabled = false
+		captureSessionManager?.stop()
+		
+		NotificationCenter.default.removeObserver(self)
+	}
+	
 	// MARK: - Private Methods
 	
 	private func configureViewEvent() {
