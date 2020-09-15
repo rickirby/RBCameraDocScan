@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol RBCameraViewControllerDelegate {
+public protocol RBCameraViewControllerDelegate {
 	func gotCapturedPicture(image: UIImage, quad: Quadrilateral?)
 	func didTapCancel()
 	func didTapImagePick()
@@ -16,7 +16,7 @@ protocol RBCameraViewControllerDelegate {
 
 public class RBCameraViewController: UIViewController {
 	
-	var delegate: RBCameraViewControllerDelegate?
+	public var delegate: RBCameraViewControllerDelegate?
 	
 	var screenView: RBCameraView {
 		return view as! RBCameraView
