@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC64B5F42510A2D500327BCD /* RBCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B5F32510A2D500327BCD /* RBCameraViewController.swift */; };
+		DC64B5F62510A37300327BCD /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B5F52510A37300327BCD /* View.swift */; };
+		DC64B5F82510A3B700327BCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B5F72510A3B700327BCD /* ViewController.swift */; };
+		DC64B5FA2510A41C00327BCD /* RBCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B5F92510A41C00327BCD /* RBCameraView.swift */; };
 		DCDB3AE7250E28F60055B1D9 /* RBCameraDocScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDB3ADD250E28F60055B1D9 /* RBCameraDocScan.framework */; };
 		DCDB3AEC250E28F60055B1D9 /* RBCameraDocScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AEB250E28F60055B1D9 /* RBCameraDocScanTests.swift */; };
 		DCDB3AEE250E28F60055B1D9 /* RBCameraDocScan.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC64B5F32510A2D500327BCD /* RBCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBCameraViewController.swift; sourceTree = "<group>"; };
+		DC64B5F52510A37300327BCD /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		DC64B5F72510A3B700327BCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC64B5F92510A41C00327BCD /* RBCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBCameraView.swift; sourceTree = "<group>"; };
 		DCDB3ADD250E28F60055B1D9 /* RBCameraDocScan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RBCameraDocScan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBCameraDocScan.h; sourceTree = "<group>"; };
 		DCDB3AE1250E28F60055B1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */,
+				DC64B5F32510A2D500327BCD /* RBCameraViewController.swift */,
+				DC64B5F92510A41C00327BCD /* RBCameraView.swift */,
 				DCDB3B23250E40920055B1D9 /* CaptureSession.swift */,
 				DCDB3B25250E40EB0055B1D9 /* CaptureSessionManager.swift */,
 				DCDB3B27250E41140055B1D9 /* RectangleFeaturesFunnel.swift */,
@@ -150,6 +160,8 @@
 				DCDB3B03250E38990055B1D9 /* CGSize+Extension.swift */,
 				DCDB3B17250E3E420055B1D9 /* CGImagePropertyOrientation+Extension.swift */,
 				DCDB3B19250E3E9E0055B1D9 /* CGRect+Extension.swift */,
+				DC64B5F52510A37300327BCD /* View.swift */,
+				DC64B5F72510A3B700327BCD /* ViewController.swift */,
 				DCDB3AE1250E28F60055B1D9 /* Info.plist */,
 			);
 			path = RBCameraDocScan;
@@ -277,14 +289,17 @@
 				DCDB3B08250E39960055B1D9 /* CameraScannerResults.swift in Sources */,
 				DCDB3B24250E40920055B1D9 /* CaptureSession.swift in Sources */,
 				DCDB3AFA250E2F430055B1D9 /* Transformable.swift in Sources */,
+				DC64B5FA2510A41C00327BCD /* RBCameraView.swift in Sources */,
 				DCDB3B0A250E39C90055B1D9 /* RectangleDetectorResult.swift in Sources */,
 				DCDB3B12250E3CD40055B1D9 /* Error.swift in Sources */,
 				DCDB3B10250E3BBC0055B1D9 /* VisionRectangleDetector.swift in Sources */,
 				DCDB3AFE250E30980055B1D9 /* CornerPosition.swift in Sources */,
 				DCDB3B06250E393F0055B1D9 /* CameraScannerScan.swift in Sources */,
 				DCDB3B2C250E41AA0055B1D9 /* ZoomGestureController.swift in Sources */,
+				DC64B5F42510A2D500327BCD /* RBCameraViewController.swift in Sources */,
 				DCDB3B2A250E41540055B1D9 /* RectangleDetectionDelegateProtocol.swift in Sources */,
 				DCDB3B16250E3DD50055B1D9 /* AddResult.swift in Sources */,
+				DC64B5F62510A37300327BCD /* View.swift in Sources */,
 				DCDB3B20250E3FF90055B1D9 /* QuadrilateralView.swift in Sources */,
 				DCDB3AF8250E2EA30055B1D9 /* Quadrilateral.swift in Sources */,
 				DCDB3B1C250E3F880055B1D9 /* ShutterButton.swift in Sources */,
@@ -292,6 +307,7 @@
 				DCDB3B02250E383F0055B1D9 /* UIImage+Extension.swift in Sources */,
 				DCDB3B26250E40EB0055B1D9 /* CaptureSessionManager.swift in Sources */,
 				DCDB3B14250E3D8A0055B1D9 /* CIRectangleDetector.swift in Sources */,
+				DC64B5F82510A3B700327BCD /* ViewController.swift in Sources */,
 				DCDB3B18250E3E420055B1D9 /* CGImagePropertyOrientation+Extension.swift in Sources */,
 				DCDB3B22250E401E0055B1D9 /* EditScanCornerView.swift in Sources */,
 				DCDB3B04250E38990055B1D9 /* CGSize+Extension.swift in Sources */,
