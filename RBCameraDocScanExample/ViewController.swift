@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RBCameraDocScan
 
 class ViewController: UIViewController {
 
