@@ -289,6 +289,11 @@ class RBCameraView: UIView {
 		setFlashButtonImage(into: currentFlashState)
 	}
 	
+	func toggleAutomatic() {
+//		CaptureSession.current.isAutoScanEnabled.toggle()
+		setAutomaticButton(into: CaptureSession.current.isAutoScanEnabled)
+	}
+	
 	func setFlashButtonImage(into state: FlashState) {
 		switch state {
 		case .off:
@@ -316,6 +321,23 @@ class RBCameraView: UIView {
 				self.currentFlashView.isHidden = false
 			})
 			break
+		}
+	}
+	
+	func setAutomaticButton(into state: Bool) {
+		if state {
+			automaticButton.tintColor = UIColor(red: 255/255, green: 214/255, blue: 10/255, alpha: 1)
+			UIView.animate(withDuration: 0.25, animations: {
+				self.currentAutomaticView.alpha = 1
+				self.currentAutomaticView.isHidden = false
+			})
+		}
+		else {
+			automaticButton.tintColor = .white
+			UIView.animate(withDuration: 0.25, animations: {
+				self.currentAutomaticView.alpha = 0
+				self.currentAutomaticView.isHidden = true
+			})
 		}
 	}
 }
