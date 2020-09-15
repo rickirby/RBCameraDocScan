@@ -164,3 +164,20 @@ class RBCameraView: UIView {
 		fatalError("init(coder:) has not been implemented")
 	}
 }
+
+extension RBCameraView {
+	@objc func captureButtonTapped() {
+	}
+	
+	@objc func cancelButtonTapped() {
+	}
+	
+	@objc func imagePickButtonTapped() {
+	}
+	
+	@objc func flashButtonTapped() {
+	}
+	
+	@objc func automaticButtonTapped() {
+	}
+}
