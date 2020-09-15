@@ -75,6 +75,24 @@ public class RBCameraViewController: UIViewController {
 	
 	private func configureCaptureSessionManager() {
 		captureSessionManager = CaptureSessionManager(videoPreviewLayer: screenView.videoPreviewLayer)
-//		captureSessionManager?.delegate = self
+		captureSessionManager?.delegate = self
+	}
+}
+
+extension RBCameraViewController: RectangleDetectionDelegateProtocol {
+	func didStartCapturingPicture(for captureSessionManager: CaptureSessionManager) {
+		
+	}
+	
+	func captureSessionManager(_ captureSessionManager: CaptureSessionManager, didDetectQuad quad: Quadrilateral?, _ imageSize: CGSize) {
+		
+	}
+	
+	func captureSessionManager(_ captureSessionManager: CaptureSessionManager, didCapturePicture picture: UIImage, withQuad quad: Quadrilateral?) {
+		
+	}
+	
+	func captureSessionManager(_ captureSessionManager: CaptureSessionManager, didFailWithError error: Error) {
+		
 	}
 }
