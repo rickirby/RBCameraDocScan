@@ -176,27 +176,4 @@ public extension UIImage {
 //			return self
 //		}
 //	}
-	
-	func createThumbnail() -> UIImage? {
-		var result: UIImage? = nil
-		if let imageData = self.pngData(){
-			let options = [
-				kCGImageSourceCreateThumbnailWithTransform: true,
-				kCGImageSourceCreateThumbnailFromImageAlways: true,
-				kCGImageSourceThumbnailMaxPixelSize: 150] as CFDictionary // Specify your desired size at kCGImageSourceThumbnailMaxPixelSize. I've specified 100 as per your question
-			
-			imageData.withUnsafeBytes { ptr in
-				guard let bytes = ptr.baseAddress?.assumingMemoryBound(to: UInt8.self) else {
-					return
-				}
-				if let cfData = CFDataCreate(kCFAllocatorDefault, bytes, imageData.count){
-					let source = CGImageSourceCreateWithData(cfData, nil)!
-					let imageReference = CGImageSourceCreateThumbnailAtIndex(source, 0, options)!
-					let thumbnail = UIImage(cgImage: imageReference)
-					result = thumbnail
-				}
-			}
-		}
-		return result
-	}
 }
