@@ -30,6 +30,8 @@ public class RBCameraViewController: UIViewController {
 		return view as! RBCameraView
 	}
 	
+	private var captureSessionManager: CaptureSessionManager?
+	
 	// MARK: - Life Cycle
 	
 	public override func loadView() {
