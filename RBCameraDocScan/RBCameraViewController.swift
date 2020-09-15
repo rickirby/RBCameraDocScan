@@ -20,6 +20,10 @@ public class RBCameraViewController: UIViewController {
 	
 	public var delegate: RBCameraViewControllerDelegate?
 	
+	public override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+	
 	// MARK: - Private Properties
 	
 	private var screenView: RBCameraView {
