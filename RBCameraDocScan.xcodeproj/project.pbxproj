@@ -10,6 +10,32 @@
 		DCDB3AE7250E28F60055B1D9 /* RBCameraDocScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDB3ADD250E28F60055B1D9 /* RBCameraDocScan.framework */; };
 		DCDB3AEC250E28F60055B1D9 /* RBCameraDocScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AEB250E28F60055B1D9 /* RBCameraDocScanTests.swift */; };
 		DCDB3AEE250E28F60055B1D9 /* RBCameraDocScan.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCDB3AF8250E2EA30055B1D9 /* Quadrilateral.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AF7250E2EA30055B1D9 /* Quadrilateral.swift */; };
+		DCDB3AFA250E2F430055B1D9 /* Transformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AF9250E2F430055B1D9 /* Transformable.swift */; };
+		DCDB3AFC250E30130055B1D9 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AFB250E30130055B1D9 /* CGPoint+Extension.swift */; };
+		DCDB3AFE250E30980055B1D9 /* CornerPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AFD250E30980055B1D9 /* CornerPosition.swift */; };
+		DCDB3B00250E31280055B1D9 /* CGAffineTransform+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AFF250E31280055B1D9 /* CGAffineTransform+Extension.swift */; };
+		DCDB3B02250E383F0055B1D9 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B01250E383F0055B1D9 /* UIImage+Extension.swift */; };
+		DCDB3B04250E38990055B1D9 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B03250E38990055B1D9 /* CGSize+Extension.swift */; };
+		DCDB3B06250E393F0055B1D9 /* CameraScannerScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B05250E393F0055B1D9 /* CameraScannerScan.swift */; };
+		DCDB3B08250E39960055B1D9 /* CameraScannerResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B07250E39960055B1D9 /* CameraScannerResults.swift */; };
+		DCDB3B0A250E39C90055B1D9 /* RectangleDetectorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B09250E39C90055B1D9 /* RectangleDetectorResult.swift */; };
+		DCDB3B0C250E3B1C0055B1D9 /* CaptureDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B0B250E3B1C0055B1D9 /* CaptureDevice.swift */; };
+		DCDB3B10250E3BBC0055B1D9 /* VisionRectangleDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B0F250E3BBC0055B1D9 /* VisionRectangleDetector.swift */; };
+		DCDB3B12250E3CD40055B1D9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B11250E3CD40055B1D9 /* Error.swift */; };
+		DCDB3B14250E3D8A0055B1D9 /* CIRectangleDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B13250E3D8A0055B1D9 /* CIRectangleDetector.swift */; };
+		DCDB3B16250E3DD50055B1D9 /* AddResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B15250E3DD50055B1D9 /* AddResult.swift */; };
+		DCDB3B18250E3E420055B1D9 /* CGImagePropertyOrientation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B17250E3E420055B1D9 /* CGImagePropertyOrientation+Extension.swift */; };
+		DCDB3B1A250E3E9E0055B1D9 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B19250E3E9E0055B1D9 /* CGRect+Extension.swift */; };
+		DCDB3B1C250E3F880055B1D9 /* ShutterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B1B250E3F880055B1D9 /* ShutterButton.swift */; };
+		DCDB3B1E250E3FCC0055B1D9 /* FocusRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B1D250E3FCC0055B1D9 /* FocusRectangleView.swift */; };
+		DCDB3B20250E3FF90055B1D9 /* QuadrilateralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B1F250E3FF90055B1D9 /* QuadrilateralView.swift */; };
+		DCDB3B22250E401E0055B1D9 /* EditScanCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B21250E401E0055B1D9 /* EditScanCornerView.swift */; };
+		DCDB3B24250E40920055B1D9 /* CaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B23250E40920055B1D9 /* CaptureSession.swift */; };
+		DCDB3B26250E40EB0055B1D9 /* CaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B25250E40EB0055B1D9 /* CaptureSessionManager.swift */; };
+		DCDB3B28250E41140055B1D9 /* RectangleFeaturesFunnel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B27250E41140055B1D9 /* RectangleFeaturesFunnel.swift */; };
+		DCDB3B2A250E41540055B1D9 /* RectangleDetectionDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B29250E41540055B1D9 /* RectangleDetectionDelegateProtocol.swift */; };
+		DCDB3B2C250E41AA0055B1D9 /* ZoomGestureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B2B250E41AA0055B1D9 /* ZoomGestureController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +55,32 @@
 		DCDB3AE6250E28F60055B1D9 /* RBCameraDocScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RBCameraDocScanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDB3AEB250E28F60055B1D9 /* RBCameraDocScanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBCameraDocScanTests.swift; sourceTree = "<group>"; };
 		DCDB3AED250E28F60055B1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCDB3AF7250E2EA30055B1D9 /* Quadrilateral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quadrilateral.swift; sourceTree = "<group>"; };
+		DCDB3AF9250E2F430055B1D9 /* Transformable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformable.swift; sourceTree = "<group>"; };
+		DCDB3AFB250E30130055B1D9 /* CGPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
+		DCDB3AFD250E30980055B1D9 /* CornerPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerPosition.swift; sourceTree = "<group>"; };
+		DCDB3AFF250E31280055B1D9 /* CGAffineTransform+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGAffineTransform+Extension.swift"; sourceTree = "<group>"; };
+		DCDB3B01250E383F0055B1D9 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		DCDB3B03250E38990055B1D9 /* CGSize+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
+		DCDB3B05250E393F0055B1D9 /* CameraScannerScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScannerScan.swift; sourceTree = "<group>"; };
+		DCDB3B07250E39960055B1D9 /* CameraScannerResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScannerResults.swift; sourceTree = "<group>"; };
+		DCDB3B09250E39C90055B1D9 /* RectangleDetectorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleDetectorResult.swift; sourceTree = "<group>"; };
+		DCDB3B0B250E3B1C0055B1D9 /* CaptureDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureDevice.swift; sourceTree = "<group>"; };
+		DCDB3B0F250E3BBC0055B1D9 /* VisionRectangleDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionRectangleDetector.swift; sourceTree = "<group>"; };
+		DCDB3B11250E3CD40055B1D9 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		DCDB3B13250E3D8A0055B1D9 /* CIRectangleDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIRectangleDetector.swift; sourceTree = "<group>"; };
+		DCDB3B15250E3DD50055B1D9 /* AddResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddResult.swift; sourceTree = "<group>"; };
+		DCDB3B17250E3E420055B1D9 /* CGImagePropertyOrientation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+Extension.swift"; sourceTree = "<group>"; };
+		DCDB3B19250E3E9E0055B1D9 /* CGRect+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
+		DCDB3B1B250E3F880055B1D9 /* ShutterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterButton.swift; sourceTree = "<group>"; };
+		DCDB3B1D250E3FCC0055B1D9 /* FocusRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusRectangleView.swift; sourceTree = "<group>"; };
+		DCDB3B1F250E3FF90055B1D9 /* QuadrilateralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrilateralView.swift; sourceTree = "<group>"; };
+		DCDB3B21250E401E0055B1D9 /* EditScanCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScanCornerView.swift; sourceTree = "<group>"; };
+		DCDB3B23250E40920055B1D9 /* CaptureSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSession.swift; sourceTree = "<group>"; };
+		DCDB3B25250E40EB0055B1D9 /* CaptureSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSessionManager.swift; sourceTree = "<group>"; };
+		DCDB3B27250E41140055B1D9 /* RectangleFeaturesFunnel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleFeaturesFunnel.swift; sourceTree = "<group>"; };
+		DCDB3B29250E41540055B1D9 /* RectangleDetectionDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleDetectionDelegateProtocol.swift; sourceTree = "<group>"; };
+		DCDB3B2B250E41AA0055B1D9 /* ZoomGestureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomGestureController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +124,32 @@
 			isa = PBXGroup;
 			children = (
 				DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */,
+				DCDB3B23250E40920055B1D9 /* CaptureSession.swift */,
+				DCDB3B25250E40EB0055B1D9 /* CaptureSessionManager.swift */,
+				DCDB3B27250E41140055B1D9 /* RectangleFeaturesFunnel.swift */,
+				DCDB3B2B250E41AA0055B1D9 /* ZoomGestureController.swift */,
+				DCDB3B1B250E3F880055B1D9 /* ShutterButton.swift */,
+				DCDB3B1D250E3FCC0055B1D9 /* FocusRectangleView.swift */,
+				DCDB3B21250E401E0055B1D9 /* EditScanCornerView.swift */,
+				DCDB3B1F250E3FF90055B1D9 /* QuadrilateralView.swift */,
+				DCDB3AF7250E2EA30055B1D9 /* Quadrilateral.swift */,
+				DCDB3B05250E393F0055B1D9 /* CameraScannerScan.swift */,
+				DCDB3B07250E39960055B1D9 /* CameraScannerResults.swift */,
+				DCDB3B09250E39C90055B1D9 /* RectangleDetectorResult.swift */,
+				DCDB3AFD250E30980055B1D9 /* CornerPosition.swift */,
+				DCDB3B0F250E3BBC0055B1D9 /* VisionRectangleDetector.swift */,
+				DCDB3B13250E3D8A0055B1D9 /* CIRectangleDetector.swift */,
+				DCDB3B11250E3CD40055B1D9 /* Error.swift */,
+				DCDB3B15250E3DD50055B1D9 /* AddResult.swift */,
+				DCDB3AF9250E2F430055B1D9 /* Transformable.swift */,
+				DCDB3B0B250E3B1C0055B1D9 /* CaptureDevice.swift */,
+				DCDB3B29250E41540055B1D9 /* RectangleDetectionDelegateProtocol.swift */,
+				DCDB3B01250E383F0055B1D9 /* UIImage+Extension.swift */,
+				DCDB3AFF250E31280055B1D9 /* CGAffineTransform+Extension.swift */,
+				DCDB3AFB250E30130055B1D9 /* CGPoint+Extension.swift */,
+				DCDB3B03250E38990055B1D9 /* CGSize+Extension.swift */,
+				DCDB3B17250E3E420055B1D9 /* CGImagePropertyOrientation+Extension.swift */,
+				DCDB3B19250E3E9E0055B1D9 /* CGRect+Extension.swift */,
 				DCDB3AE1250E28F60055B1D9 /* Info.plist */,
 			);
 			path = RBCameraDocScan;
@@ -148,6 +226,7 @@
 				TargetAttributes = {
 					DCDB3ADC250E28F60055B1D9 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					DCDB3AE5250E28F60055B1D9 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -195,6 +274,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDB3B08250E39960055B1D9 /* CameraScannerResults.swift in Sources */,
+				DCDB3B24250E40920055B1D9 /* CaptureSession.swift in Sources */,
+				DCDB3AFA250E2F430055B1D9 /* Transformable.swift in Sources */,
+				DCDB3B0A250E39C90055B1D9 /* RectangleDetectorResult.swift in Sources */,
+				DCDB3B12250E3CD40055B1D9 /* Error.swift in Sources */,
+				DCDB3B10250E3BBC0055B1D9 /* VisionRectangleDetector.swift in Sources */,
+				DCDB3AFE250E30980055B1D9 /* CornerPosition.swift in Sources */,
+				DCDB3B06250E393F0055B1D9 /* CameraScannerScan.swift in Sources */,
+				DCDB3B2C250E41AA0055B1D9 /* ZoomGestureController.swift in Sources */,
+				DCDB3B2A250E41540055B1D9 /* RectangleDetectionDelegateProtocol.swift in Sources */,
+				DCDB3B16250E3DD50055B1D9 /* AddResult.swift in Sources */,
+				DCDB3B20250E3FF90055B1D9 /* QuadrilateralView.swift in Sources */,
+				DCDB3AF8250E2EA30055B1D9 /* Quadrilateral.swift in Sources */,
+				DCDB3B1C250E3F880055B1D9 /* ShutterButton.swift in Sources */,
+				DCDB3B28250E41140055B1D9 /* RectangleFeaturesFunnel.swift in Sources */,
+				DCDB3B02250E383F0055B1D9 /* UIImage+Extension.swift in Sources */,
+				DCDB3B26250E40EB0055B1D9 /* CaptureSessionManager.swift in Sources */,
+				DCDB3B14250E3D8A0055B1D9 /* CIRectangleDetector.swift in Sources */,
+				DCDB3B18250E3E420055B1D9 /* CGImagePropertyOrientation+Extension.swift in Sources */,
+				DCDB3B22250E401E0055B1D9 /* EditScanCornerView.swift in Sources */,
+				DCDB3B04250E38990055B1D9 /* CGSize+Extension.swift in Sources */,
+				DCDB3B1A250E3E9E0055B1D9 /* CGRect+Extension.swift in Sources */,
+				DCDB3B1E250E3FCC0055B1D9 /* FocusRectangleView.swift in Sources */,
+				DCDB3AFC250E30130055B1D9 /* CGPoint+Extension.swift in Sources */,
+				DCDB3B0C250E3B1C0055B1D9 /* CaptureDevice.swift in Sources */,
+				DCDB3B00250E31280055B1D9 /* CGAffineTransform+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +445,7 @@
 		DCDB3AF2250E28F60055B1D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6NMANHT3A2;
@@ -359,6 +465,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -367,6 +474,7 @@
 		DCDB3AF3250E28F60055B1D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6NMANHT3A2;
@@ -394,6 +502,7 @@
 		DCDB3AF5250E28F60055B1D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6NMANHT3A2;
 				INFOPLIST_FILE = RBCameraDocScanTests/Info.plist;
@@ -412,6 +521,7 @@
 		DCDB3AF6250E28F60055B1D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6NMANHT3A2;
 				INFOPLIST_FILE = RBCameraDocScanTests/Info.plist;
