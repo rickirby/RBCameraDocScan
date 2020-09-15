@@ -173,10 +173,91 @@ class RBCameraView: UIView {
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
+		setViews()
 	}
 	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
+	}
+	
+	func setViews() {
+		previewView.layer.addSublayer(videoPreviewLayer)
+		
+		addAllSubviews(views: [topMaskView, bottomMaskView, previewView, quadView, flashView, captureButton, cancelButton, imagePickButton, flashButton, automaticButton, hStack, activityIndicator])
+		currentFlashView.addSubview(currentFlashImageView)
+		currentAutomaticView.addSubview(currentAutomaticLabel)
+		hStack.makeHStack([currentFlashView, currentAutomaticView])
+		
+		NSLayoutConstraint.activate([
+			topMaskView.topAnchor.constraint(equalTo: self.topAnchor),
+			topMaskView.leftAnchor.constraint(equalTo: self.leftAnchor),
+			topMaskView.rightAnchor.constraint(equalTo: self.rightAnchor),
+			topMaskView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: CGFloat(68).makeDynamicH()),
+			
+			bottomMaskView.leftAnchor.constraint(equalTo: self.leftAnchor),
+			bottomMaskView.rightAnchor.constraint(equalTo: self.rightAnchor),
+			bottomMaskView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+			bottomMaskView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: CGFloat(-135).makeDynamicH()),
+			
+			previewView.topAnchor.constraint(equalTo: topMaskView.bottomAnchor),
+			previewView.leftAnchor.constraint(equalTo: self.leftAnchor),
+			previewView.rightAnchor.constraint(equalTo: self.rightAnchor),
+			previewView.bottomAnchor.constraint(equalTo: bottomMaskView.topAnchor),
+			
+			quadView.topAnchor.constraint(equalTo: previewView.topAnchor),
+			quadView.leftAnchor.constraint(equalTo: previewView.leftAnchor),
+			quadView.rightAnchor.constraint(equalTo: previewView.rightAnchor),
+			quadView.bottomAnchor.constraint(equalTo: previewView.bottomAnchor),
+			
+			flashView.topAnchor.constraint(equalTo: self.topAnchor),
+			flashView.leftAnchor.constraint(equalTo: self.leftAnchor),
+			flashView.rightAnchor.constraint(equalTo: self.rightAnchor),
+			flashView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+			
+			captureButton.centerXAnchor.constraint(equalTo: bottomMaskView.centerXAnchor),
+			captureButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: CGFloat(-40).makeDynamicH()),
+			captureButton.widthAnchor.constraint(equalToConstant: CGFloat(72).makeDynamicW()),
+			captureButton.heightAnchor.constraint(equalToConstant: CGFloat(72).makeDynamicW()),
+			
+			cancelButton.centerYAnchor.constraint(equalTo: captureButton.centerYAnchor),
+			cancelButton.leftAnchor.constraint(equalTo: bottomMaskView.leftAnchor, constant: CGFloat(55).makeDynamicW()),
+			cancelButton.widthAnchor.constraint(equalToConstant: CGFloat(21).makeDynamicW()),
+			cancelButton.heightAnchor.constraint(equalToConstant: CGFloat(21).makeDynamicW()),
+			
+			imagePickButton.centerYAnchor.constraint(equalTo: captureButton.centerYAnchor),
+			imagePickButton.rightAnchor.constraint(equalTo: bottomMaskView.rightAnchor, constant: CGFloat(-52).makeDynamicW()),
+			imagePickButton.widthAnchor.constraint(equalToConstant: CGFloat(34).makeDynamicW()),
+			imagePickButton.heightAnchor.constraint(equalToConstant: CGFloat(29).makeDynamicW()),
+			
+			flashButton.centerYAnchor.constraint(equalTo: topMaskView.centerYAnchor),
+			flashButton.leftAnchor.constraint(equalTo: layoutMarginsGuide.leftAnchor),
+			flashButton.widthAnchor.constraint(equalToConstant: CGFloat(16).makeDynamicW()),
+			flashButton.heightAnchor.constraint(equalToConstant: CGFloat(20).makeDynamicW()),
+			
+			automaticButton.centerYAnchor.constraint(equalTo: topMaskView.centerYAnchor),
+			automaticButton.rightAnchor.constraint(equalTo: layoutMarginsGuide.rightAnchor),
+			automaticButton.widthAnchor.constraint(equalToConstant: CGFloat(18).makeDynamicW()),
+			automaticButton.heightAnchor.constraint(equalToConstant: CGFloat(21.75).makeDynamicW()),
+			
+			currentAutomaticLabel.leftAnchor.constraint(equalTo: currentAutomaticView.leftAnchor, constant: 10),
+			currentAutomaticView.rightAnchor.constraint(equalTo: currentAutomaticLabel.rightAnchor, constant: 10),
+			currentAutomaticLabel.topAnchor.constraint(equalTo: currentAutomaticView.topAnchor, constant: 3),
+			currentAutomaticLabel.bottomAnchor.constraint(equalTo: currentAutomaticView.bottomAnchor, constant: -3),
+			
+			currentFlashView.heightAnchor.constraint(equalTo: currentAutomaticView.heightAnchor),
+			
+			currentFlashImageView.topAnchor.constraint(equalTo: currentFlashView.topAnchor, constant: CGFloat(5).makeDynamicH()),
+			currentFlashImageView.bottomAnchor.constraint(equalTo: currentFlashView.bottomAnchor, constant: CGFloat(-5).makeDynamicH()),
+			currentFlashImageView.leftAnchor.constraint(equalTo: currentFlashView.leftAnchor, constant: CGFloat(10).makeDynamicW()),
+			currentFlashImageView.rightAnchor.constraint(equalTo: currentFlashView.rightAnchor, constant: CGFloat(-10).makeDynamicW()),
+			currentFlashImageView.widthAnchor.constraint(equalToConstant: 35),
+			
+			hStack.centerXAnchor.constraint(equalTo: topMaskView.centerXAnchor),
+			hStack.bottomAnchor.constraint(equalTo: topMaskView.bottomAnchor, constant: CGFloat(-12).makeDynamicW()),
+			
+			activityIndicator.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+			activityIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+		])
 	}
 }
 
