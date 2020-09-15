@@ -60,6 +60,7 @@ class RBCameraView: UIView {
 		let button = UIButton()
 		button.translatesAutoresizingMaskIntoConstraints = false
 		button.setImage(UIImage(named: "CaptureButton"), for: .normal)
+		button.addTarget(self, action: #selector(captureButtonTapped), for: .touchUpInside)
 		
 		return button
 	}()
@@ -68,6 +69,7 @@ class RBCameraView: UIView {
 		let button = UIButton()
 		button.translatesAutoresizingMaskIntoConstraints = false
 		button.setImage(UIImage(named: "CancelButton"), for: .normal)
+		button.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
 		
 		return button
 	}()
@@ -76,6 +78,7 @@ class RBCameraView: UIView {
 		let button = UIButton()
 		button.translatesAutoresizingMaskIntoConstraints = false
 		button.setImage(UIImage(named: "ImagePickButton"), for: .normal)
+		button.addTarget(self, action: #selector(imagePickButtonTapped), for: .touchUpInside)
 		
 		return button
 	}()
@@ -85,6 +88,7 @@ class RBCameraView: UIView {
 		button.translatesAutoresizingMaskIntoConstraints = false
 		button.setImage(UIImage(named: "FlashOffButton"), for: .normal)
 		button.imageView?.contentMode = .scaleAspectFit
+		button.addTarget(self, action: #selector(flashButtonTapped), for: .touchUpInside)
 		
 		return button
 	}()
@@ -94,6 +98,7 @@ class RBCameraView: UIView {
 		button.translatesAutoresizingMaskIntoConstraints = false
 		button.setImage(UIImage(named: "AutomaticButton")?.withRenderingMode(.alwaysTemplate), for: .normal)
 		button.tintColor = .white
+		button.addTarget(self, action: #selector(automaticButtonTapped), for: .touchUpInside)
 		
 		return button
 	}()
