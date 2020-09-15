@@ -182,17 +182,22 @@ class RBCameraView: UIView {
 
 extension RBCameraView {
 	@objc func captureButtonTapped() {
+		onViewEvent?(.didTapCapture)
 	}
 	
 	@objc func cancelButtonTapped() {
+		onViewEvent?(.didTapCancel)
 	}
 	
 	@objc func imagePickButtonTapped() {
+		onViewEvent?(.didTapImagePick)
 	}
 	
 	@objc func flashButtonTapped() {
+		onViewEvent?(.didTapFlash)
 	}
 	
 	@objc func automaticButtonTapped() {
+		onViewEvent?(.didTapAutomatic)
 	}
 }
