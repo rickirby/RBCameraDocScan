@@ -18,4 +18,9 @@ public class RBCameraViewController: UIViewController {
 		super.loadView()
 		view = RBCameraView()
 	}
+	
+	public override func viewDidLayoutSubviews() {
+		super.viewDidLayoutSubviews()
+		screenView.onViewDidLayoutSubviews()
+	}
 }

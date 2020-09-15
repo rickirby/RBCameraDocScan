@@ -259,6 +259,10 @@ class RBCameraView: UIView {
 			activityIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor)
 		])
 	}
+	
+	func onViewDidLayoutSubviews() {
+		videoPreviewLayer.frame = previewView.layer.bounds
+	}
 }
 
 extension RBCameraView {
