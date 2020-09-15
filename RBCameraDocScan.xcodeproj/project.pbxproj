@@ -11,6 +11,12 @@
 		DC64B5F62510A37300327BCD /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B5F52510A37300327BCD /* View.swift */; };
 		DC64B5F82510A3B700327BCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B5F72510A3B700327BCD /* ViewController.swift */; };
 		DC64B5FA2510A41C00327BCD /* RBCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B5F92510A41C00327BCD /* RBCameraView.swift */; };
+		DC64B61A2510A54100327BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B6192510A54100327BCD /* AppDelegate.swift */; };
+		DC64B61C2510A54100327BCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B61B2510A54100327BCD /* SceneDelegate.swift */; };
+		DC64B61E2510A54100327BCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B61D2510A54100327BCD /* ViewController.swift */; };
+		DC64B6212510A54100327BCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC64B61F2510A54100327BCD /* Main.storyboard */; };
+		DC64B6232510A54200327BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC64B6222510A54200327BCD /* Assets.xcassets */; };
+		DC64B6262510A54200327BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC64B6242510A54200327BCD /* LaunchScreen.storyboard */; };
 		DCDB3AE7250E28F60055B1D9 /* RBCameraDocScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDB3ADD250E28F60055B1D9 /* RBCameraDocScan.framework */; };
 		DCDB3AEC250E28F60055B1D9 /* RBCameraDocScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AEB250E28F60055B1D9 /* RBCameraDocScanTests.swift */; };
 		DCDB3AEE250E28F60055B1D9 /* RBCameraDocScan.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,6 +63,14 @@
 		DC64B5F52510A37300327BCD /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DC64B5F72510A3B700327BCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC64B5F92510A41C00327BCD /* RBCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBCameraView.swift; sourceTree = "<group>"; };
+		DC64B6172510A54100327BCD /* RBCameraDocScanExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RBCameraDocScanExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC64B6192510A54100327BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC64B61B2510A54100327BCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DC64B61D2510A54100327BCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC64B6202510A54100327BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC64B6222510A54200327BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC64B6252510A54200327BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC64B6272510A54200327BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCDB3ADD250E28F60055B1D9 /* RBCameraDocScan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RBCameraDocScan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBCameraDocScan.h; sourceTree = "<group>"; };
 		DCDB3AE1250E28F60055B1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +106,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DC64B6142510A54100327BCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DCDB3ADA250E28F60055B1D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,11 +131,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC64B6182510A54100327BCD /* RBCameraDocScanExample */ = {
+			isa = PBXGroup;
+			children = (
+				DC64B6192510A54100327BCD /* AppDelegate.swift */,
+				DC64B61B2510A54100327BCD /* SceneDelegate.swift */,
+				DC64B61D2510A54100327BCD /* ViewController.swift */,
+				DC64B61F2510A54100327BCD /* Main.storyboard */,
+				DC64B6222510A54200327BCD /* Assets.xcassets */,
+				DC64B6242510A54200327BCD /* LaunchScreen.storyboard */,
+				DC64B6272510A54200327BCD /* Info.plist */,
+			);
+			path = RBCameraDocScanExample;
+			sourceTree = "<group>";
+		};
 		DCDB3AD3250E28F60055B1D9 = {
 			isa = PBXGroup;
 			children = (
 				DCDB3ADF250E28F60055B1D9 /* RBCameraDocScan */,
 				DCDB3AEA250E28F60055B1D9 /* RBCameraDocScanTests */,
+				DC64B6182510A54100327BCD /* RBCameraDocScanExample */,
 				DCDB3ADE250E28F60055B1D9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -124,6 +160,7 @@
 			children = (
 				DCDB3ADD250E28F60055B1D9 /* RBCameraDocScan.framework */,
 				DCDB3AE6250E28F60055B1D9 /* RBCameraDocScanTests.xctest */,
+				DC64B6172510A54100327BCD /* RBCameraDocScanExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +227,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		DC64B6162510A54100327BCD /* RBCameraDocScanExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC64B62A2510A54200327BCD /* Build configuration list for PBXNativeTarget "RBCameraDocScanExample" */;
+			buildPhases = (
+				DC64B6132510A54100327BCD /* Sources */,
+				DC64B6142510A54100327BCD /* Frameworks */,
+				DC64B6152510A54100327BCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RBCameraDocScanExample;
+			productName = RBCameraDocScanExample;
+			productReference = DC64B6172510A54100327BCD /* RBCameraDocScanExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		DCDB3ADC250E28F60055B1D9 /* RBCameraDocScan */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCDB3AF1250E28F60055B1D9 /* Build configuration list for PBXNativeTarget "RBCameraDocScan" */;
@@ -236,6 +290,9 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Ricki Bin Yamin";
 				TargetAttributes = {
+					DC64B6162510A54100327BCD = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					DCDB3ADC250E28F60055B1D9 = {
 						CreatedOnToolsVersion = 11.3.1;
 						LastSwiftMigration = 1130;
@@ -260,11 +317,22 @@
 			targets = (
 				DCDB3ADC250E28F60055B1D9 /* RBCameraDocScan */,
 				DCDB3AE5250E28F60055B1D9 /* RBCameraDocScanTests */,
+				DC64B6162510A54100327BCD /* RBCameraDocScanExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DC64B6152510A54100327BCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC64B6262510A54200327BCD /* LaunchScreen.storyboard in Resources */,
+				DC64B6232510A54200327BCD /* Assets.xcassets in Resources */,
+				DC64B6212510A54100327BCD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DCDB3ADB250E28F60055B1D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,6 +350,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DC64B6132510A54100327BCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC64B61E2510A54100327BCD /* ViewController.swift in Sources */,
+				DC64B61A2510A54100327BCD /* AppDelegate.swift in Sources */,
+				DC64B61C2510A54100327BCD /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DCDB3AD9250E28F60055B1D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,7 +415,62 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		DC64B61F2510A54100327BCD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC64B6202510A54100327BCD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC64B6242510A54200327BCD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC64B6252510A54200327BCD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		DC64B6282510A54200327BCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6NMANHT3A2;
+				INFOPLIST_FILE = RBCameraDocScanExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.erbe.apps.RBCameraDocScanExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC64B6292510A54200327BCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6NMANHT3A2;
+				INFOPLIST_FILE = RBCameraDocScanExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.erbe.apps.RBCameraDocScanExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		DCDB3AEF250E28F60055B1D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -556,6 +689,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DC64B62A2510A54200327BCD /* Build configuration list for PBXNativeTarget "RBCameraDocScanExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC64B6282510A54200327BCD /* Debug */,
+				DC64B6292510A54200327BCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DCDB3AD7250E28F60055B1D9 /* Build configuration list for PBXProject "RBCameraDocScan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
