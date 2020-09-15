@@ -10,4 +10,12 @@ import UIKit
 
 public class RBCameraViewController: UIViewController {
 	
+	var screenView: RBCameraView {
+		return view as! RBCameraView
+	}
+	
+	public override func loadView() {
+		super.loadView()
+		view = RBCameraView()
+	}
 }
