@@ -11,6 +11,16 @@ import AVFoundation
 
 class RBCameraView: UIView {
 	
+	enum ViewEvent {
+		case didTapCapture
+		case didTapCancel
+		case didTapImagePick
+		case didTapFlash
+		case didTapAutomatic
+	}
+	
+	var onViewEvent: ((ViewEvent) -> Void)?
+	
 	let videoPreviewLayer = AVCaptureVideoPreviewLayer()
 	var focusRectangle: FocusRectangleView!
 	
