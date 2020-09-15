@@ -16,6 +16,11 @@ class ViewController: UIViewController {
 		// Do any additional setup after loading the view.
 	}
 
-
+	@IBAction func openCameraButtonTapped(_ sender: UIButton) {
+		let vc = RBCameraViewController()
+		vc.modalPresentationStyle = .fullScreen
+		self.present(vc, animated: true, completion: nil)
+	}
+	
 }
 
