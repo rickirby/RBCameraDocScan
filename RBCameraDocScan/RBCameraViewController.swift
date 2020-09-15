@@ -46,9 +46,9 @@ public class RBCameraViewController: UIViewController {
 //				self.captureSessionManager?.capturePhoto()
 				print("Tap Capture")
 			case .didTapCancel:
-				print("Tap Cancel")
+				self?.onNavigationEvent?(.didTapCancel)
 			case .didTapImagePick:
-				print("Tap Image Pick")
+				self?.onNavigationEvent?(.didTapImagePick)
 			case .setFlash(let state):
 				CaptureSession.current.setFlash(into: state)
 			case .toggleAutomatic:
