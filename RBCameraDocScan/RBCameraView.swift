@@ -19,6 +19,12 @@ class RBCameraView: UIView {
 		case didTapAutomatic
 	}
 	
+	enum FlashState {
+		case off
+		case on
+		case torch
+	}
+	
 	var onViewEvent: ((ViewEvent) -> Void)?
 	
 	let videoPreviewLayer = AVCaptureVideoPreviewLayer()
