@@ -28,16 +28,16 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: RBCameraViewControllerDelegate {
-	func gotCapturedPicture(on target: UIViewController, image: UIImage, quad: Quadrilateral?) {
+	func gotCapturedPicture(_ target: UIViewController, image: UIImage, quad: Quadrilateral?) {
 		target.dismiss(animated: true, completion: nil)
 		resultImageView.image = image
 	}
 	
-	func didTapCancel(on target: UIViewController) {
+	func didTapCancel(_ target: UIViewController) {
 		print("Tap Cancel")
 	}
 	
-	func didTapImagePick(on target: UIViewController) {
+	func didTapImagePick(_ target: UIViewController) {
 		print("Tap Image Pick")
 	}
 }
