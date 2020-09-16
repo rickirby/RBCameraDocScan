@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension CGSize {
+extension CGSize {
 	func scaleFactor(forMaxWidth maxWidth: CGFloat, maxHeight: CGFloat) -> CGFloat {
 		if width < maxWidth && height < maxHeight { return 1 }
 		
