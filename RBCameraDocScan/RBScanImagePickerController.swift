@@ -29,21 +29,27 @@ public class RBScanImagePickerController: UIImagePickerController, UIImagePicker
 	public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 		picker.dismiss(animated: true)
 		
-		guard let image = info[.originalImage] as? UIImage else { return }
-		var detectedQuad: Quadrilateral?
-		
-		guard let ciImage = CIImage(image: image) else { return }
-		let orientation = CGImagePropertyOrientation(image.imageOrientation)
-		let orientedImage = ciImage.oriented(forExifOrientation: Int32(orientation.rawValue))
-		if #available(iOS 11.0, *) {
-			VisionRectangleDetector.rectangle(forImage: ciImage, orientation: orientation) { (quad) in
-				detectedQuad = quad?.toCartesian(withHeight: orientedImage.extent.height)
-				self.scanDelegate?.gotPicture(image: image, quad: detectedQuad)
+		DispatchQueue.global(qos: .userInitiated).async {
+			guard let image = info[.originalImage] as? UIImage else { return }
+			var detectedQuad: Quadrilateral?
+			
+			guard let ciImage = CIImage(image: image) else { return }
+			let orientation = CGImagePropertyOrientation(image.imageOrientation)
+			let orientedImage = ciImage.oriented(forExifOrientation: Int32(orientation.rawValue))
+			if #available(iOS 11.0, *) {
+				VisionRectangleDetector.rectangle(forImage: ciImage, orientation: orientation) { (quad) in
+					detectedQuad = quad?.toCartesian(withHeight: orientedImage.extent.height)
+					DispatchQueue.main.async {
+						self.scanDelegate?.gotPicture(image: image, quad: detectedQuad)
+					}
+				}
 			}
-		}
-		else {
-			detectedQuad = CIRectangleDetector.rectangle(forImage: ciImage)?.toCartesian(withHeight: orientedImage.extent.height)
-			scanDelegate?.gotPicture(image: image, quad: detectedQuad)
+			else {
+				detectedQuad = CIRectangleDetector.rectangle(forImage: ciImage)?.toCartesian(withHeight: orientedImage.extent.height)
+				DispatchQueue.main.async {
+					self.scanDelegate?.gotPicture(image: image, quad: detectedQuad)
+				}
+			}
 		}
 	}
 }

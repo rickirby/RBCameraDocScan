@@ -25,9 +25,18 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mdO-Wm-QUL">
                                 <rect key="frame" x="87" y="520" width="240" height="218"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-kI-82Q">
+                                <rect key="frame" x="184" y="248" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="openPickerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oiB-Hf-CuF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="GPV-kI-82Q" firstAttribute="top" secondItem="eey-Jc-wZa" secondAttribute="bottom" constant="41" id="0Zi-B5-Riu"/>
+                            <constraint firstItem="GPV-kI-82Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6er-jZ-2z5"/>
                             <constraint firstItem="mdO-Wm-QUL" firstAttribute="top" secondItem="eey-Jc-wZa" secondAttribute="bottom" constant="313" id="JJe-w8-TbO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mdO-Wm-QUL" secondAttribute="trailing" constant="87" id="XsP-bA-U5C"/>
                             <constraint firstItem="eey-Jc-wZa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="133" id="Zkw-u6-57i"/>
