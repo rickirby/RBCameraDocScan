@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIImage {
+extension UIImage {
 	func scaledImage(atPoint point: CGPoint, scaleFactor: CGFloat, targetSize size: CGSize) -> UIImage? {
 		guard let cgImage = self.cgImage else { return nil }
 		
@@ -93,13 +93,9 @@ public extension UIImage {
 		return pixelBuffer
 	}
 	
-	static func from(ciImage: CIImage) -> UIImage {
-		if let cgImage = CIContext(options: nil).createCGImage(ciImage, from: ciImage.extent) {
-			return UIImage(cgImage: cgImage)
-		} else {
-			return UIImage(ciImage: ciImage, scale: 1.0, orientation: .up)
-		}
-	}
+}
+
+public extension UIImage {
 	
 	struct RotationOptions: OptionSet {
 		public let rawValue: Int
@@ -109,6 +105,14 @@ public extension UIImage {
 		
 		public init(rawValue: Int) {
 			self.rawValue = rawValue
+		}
+	}
+	
+	static func from(ciImage: CIImage) -> UIImage {
+		if let cgImage = CIContext(options: nil).createCGImage(ciImage, from: ciImage.extent) {
+			return UIImage(cgImage: cgImage)
+		} else {
+			return UIImage(ciImage: ciImage, scale: 1.0, orientation: .up)
 		}
 	}
 	
@@ -155,4 +159,5 @@ public extension UIImage {
 		
 		return image
 	}
+	
 }
