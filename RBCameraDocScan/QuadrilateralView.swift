@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class QuadrilateralView: UIView {
+public class QuadrilateralView: UIView {
 	
 	private let quadLayer: CAShapeLayer = {
 		let layer = CAShapeLayer()
@@ -21,8 +21,6 @@ class QuadrilateralView: UIView {
 		return layer
 	}()
 	
-	/// We want the corner views to be displayed under the outline of the quadrilateral.
-	/// Because of that, we need the quadrilateral to be drawn on a UIView above them.
 	private let quadView: UIView = {
 		let view = UIView()
 		view.backgroundColor = UIColor.clear
@@ -30,7 +28,6 @@ class QuadrilateralView: UIView {
 		return view
 	}()
 	
-	/// The quadrilateral drawn on the view.
 	private(set) var quad: Quadrilateral?
 	
 	public var editable = false {
@@ -76,7 +73,7 @@ class QuadrilateralView: UIView {
 	
 	// MARK: - Life Cycle
 	
-	override init(frame: CGRect) {
+	public override init(frame: CGRect) {
 		super.init(frame: frame)
 		commonInit()
 	}
@@ -110,7 +107,7 @@ class QuadrilateralView: UIView {
 		addSubview(bottomLeftCornerView)
 	}
 	
-	override public func layoutSubviews() {
+	public override func layoutSubviews() {
 		super.layoutSubviews()
 		guard quadLayer.frame != bounds else {
 			return
@@ -124,11 +121,7 @@ class QuadrilateralView: UIView {
 	
 	// MARK: - Drawings
 	
-	/// Draws the passed in quadrilateral.
-	///
-	/// - Parameters:
-	///   - quad: The quadrilateral to draw on the view. It should be in the coordinates of the current `QuadrilateralView` instance.
-	func drawQuadrilateral(quad: Quadrilateral, animated: Bool) {
+	public func drawQuadrilateral(quad: Quadrilateral, animated: Bool) {
 		self.quad = quad
 		drawQuad(quad, animated: animated)
 		if editable {
@@ -163,7 +156,7 @@ class QuadrilateralView: UIView {
 		bottomRightCornerView.center = quad.bottomRight
 	}
 	
-	func removeQuadrilateral() {
+	public func removeQuadrilateral() {
 		quadLayer.path = nil
 		quadLayer.isHidden = true
 	}
@@ -223,13 +216,6 @@ class QuadrilateralView: UIView {
 	
 	// MARK: Validation
 	
-	/// Ensures that the given point is valid - meaning that it is within the bounds of the passed in `UIView`.
-	///
-	/// - Parameters:
-	///   - point: The point that needs to be validated.
-	///   - cornerViewSize: The size of the corner view representing the given point.
-	///   - view: The view which should include the point.
-	/// - Returns: A new point which is within the passed in view.
 	private func validPoint(_ point: CGPoint, forCornerViewOfSize cornerViewSize: CGSize, inView view: UIView) -> CGPoint {
 		var validPoint = point
 		

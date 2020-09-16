@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIImage {
+extension UIImage {
 	func scaledImage(atPoint point: CGPoint, scaleFactor: CGFloat, targetSize size: CGSize) -> UIImage? {
 		guard let cgImage = self.cgImage else { return nil }
 		
@@ -43,29 +43,6 @@ public extension UIImage {
 		return context.makeImage().flatMap { UIImage(cgImage: $0) }
 	}
 	
-	/// Returns the data for the image in the PDF format
-	func pdfData() -> Data? {
-		// Typical Letter PDF page size and margins
-		let pageBounds = CGRect(x: 0, y: 0, width: 595, height: 842)
-		let margin: CGFloat = 40
-		
-		let imageMaxWidth = pageBounds.width - (margin * 2)
-		let imageMaxHeight = pageBounds.height - (margin * 2)
-		
-		let image = scaledImage(scaleFactor: size.scaleFactor(forMaxWidth: imageMaxWidth, maxHeight: imageMaxHeight)) ?? self
-		let renderer = UIGraphicsPDFRenderer(bounds: pageBounds)
-		
-		let data = renderer.pdfData { (ctx) in
-			ctx.beginPage()
-			
-			ctx.cgContext.interpolationQuality = .high
-			
-			image.draw(at: CGPoint(x: margin, y: margin))
-		}
-		
-		return data
-	}
-	
 	func pixelBuffer() -> CVPixelBuffer? {
 		let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
 		var pixelBufferOpt: CVPixelBuffer?
@@ -93,13 +70,9 @@ public extension UIImage {
 		return pixelBuffer
 	}
 	
-	static func from(ciImage: CIImage) -> UIImage {
-		if let cgImage = CIContext(options: nil).createCGImage(ciImage, from: ciImage.extent) {
-			return UIImage(cgImage: cgImage)
-		} else {
-			return UIImage(ciImage: ciImage, scale: 1.0, orientation: .up)
-		}
-	}
+}
+
+public extension UIImage {
 	
 	struct RotationOptions: OptionSet {
 		public let rawValue: Int
@@ -109,6 +82,14 @@ public extension UIImage {
 		
 		public init(rawValue: Int) {
 			self.rawValue = rawValue
+		}
+	}
+	
+	static func from(ciImage: CIImage) -> UIImage {
+		if let cgImage = CIContext(options: nil).createCGImage(ciImage, from: ciImage.extent) {
+			return UIImage(cgImage: cgImage)
+		} else {
+			return UIImage(ciImage: ciImage, scale: 1.0, orientation: .up)
 		}
 	}
 	
@@ -155,4 +136,5 @@ public extension UIImage {
 		
 		return image
 	}
+	
 }

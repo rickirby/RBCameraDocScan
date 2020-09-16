@@ -68,12 +68,6 @@ final class RectangleFeaturesFunnel {
 		}
 	}
 	
-	/// Determines which rectangle is best to displayed.
-	/// The criteria used to find the best rectangle is its matching score.
-	/// If multiple rectangles have the same matching score, we use a tie breaker to find the best rectangle (@see breakTie(forRectangles:)).
-	/// Parameters:
-	///   - currentRectangle: The currently displayed rectangle. This is used to avoid displaying very close rectangles.
-	/// Returns: The best rectangle to display given the current history.
 	private func bestRectangle(withCurrentlyDisplayedRectangle currentRectangle: Quadrilateral?) -> RectangleMatch? {
 		var bestMatch: RectangleMatch?
 		guard !rectangles.isEmpty else { return nil }
@@ -98,16 +92,6 @@ final class RectangleFeaturesFunnel {
 		return bestMatch
 	}
 	
-	/// Breaks a tie between two rectangles to find out which is best to display.
-	/// The first passed rectangle is returned if no other criteria could be used to break the tie.
-	/// If the first passed rectangle (rect1) is close to the currently displayed rectangle, we pick it.
-	/// Otherwise if the second passed rectangle (rect2) is close to the currently displayed rectangle, we pick this one.
-	/// Finally, if none of the passed in rectangles are close to the currently displayed rectangle, we arbitrary pick the first one.
-	/// - Parameters:
-	///   - rect1: The first rectangle to compare.
-	///   - rect2: The second rectangle to compare.
-	///   - currentRectangle: The currently displayed rectangle. This is used to avoid displaying very close rectangles.
-	/// - Returns: The best rectangle to display between two rectangles with the same matching score.
 	private func breakTie(between rect1: RectangleMatch, rect2: RectangleMatch, currentRectangle: Quadrilateral) -> RectangleMatch {
 		if rect1.rectangleFeature.isWithin(matchingThreshold, ofRectangleFeature: currentRectangle) {
 			return rect1
@@ -118,7 +102,6 @@ final class RectangleFeaturesFunnel {
 		return rect1
 	}
 	
-	/// Loops through all of the rectangles of the queue, and gives them a score depending on how many they match. @see `RectangleMatch.matchingScore`
 	private func updateRectangleMatches() {
 		resetMatchingScores()
 		guard !rectangles.isEmpty else { return }
@@ -132,7 +115,6 @@ final class RectangleFeaturesFunnel {
 		}
 	}
 	
-	/// Resets the matching score of all of the rectangles in the queue to 0
 	private func resetMatchingScores() {
 		guard !rectangles.isEmpty else { return }
 		for rectangle in rectangles {
