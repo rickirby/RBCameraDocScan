@@ -18,6 +18,8 @@
 		DC64B62E2510BC6700327BCD /* HStack+VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B62D2510BC6700327BCD /* HStack+VStack.swift */; };
 		DC64B6302510BDCB00327BCD /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B62F2510BDCB00327BCD /* CGFloat+Extension.swift */; };
 		DC64B6342510D20E00327BCD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B6332510D20E00327BCD /* UIView+Extension.swift */; };
+		DC7784D02511D18F00D5DC5D /* RBCameraDocScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDB3ADD250E28F60055B1D9 /* RBCameraDocScan.framework */; };
+		DC7784D12511D18F00D5DC5D /* RBCameraDocScan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DCDB3ADD250E28F60055B1D9 /* RBCameraDocScan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DCDB3AE7250E28F60055B1D9 /* RBCameraDocScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDB3ADD250E28F60055B1D9 /* RBCameraDocScan.framework */; };
 		DCDB3AEC250E28F60055B1D9 /* RBCameraDocScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AEB250E28F60055B1D9 /* RBCameraDocScanTests.swift */; };
 		DCDB3AEE250E28F60055B1D9 /* RBCameraDocScan.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -50,6 +52,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DC7784D22511D18F00D5DC5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCDB3AD4250E28F60055B1D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCDB3ADC250E28F60055B1D9;
+			remoteInfo = RBCameraDocScan;
+		};
 		DCDB3AE8250E28F60055B1D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DCDB3AD4250E28F60055B1D9 /* Project object */;
@@ -58,6 +67,20 @@
 			remoteInfo = RBCameraDocScan;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DC7784D42511D18F00D5DC5D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DC7784D12511D18F00D5DC5D /* RBCameraDocScan.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DC64B5F32510A2D500327BCD /* RBCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBCameraViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7784D02511D18F00D5DC5D /* RBCameraDocScan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +171,13 @@
 			path = RBCameraDocScanExample;
 			sourceTree = "<group>";
 		};
+		DC7784CF2511D18F00D5DC5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DCDB3AD3250E28F60055B1D9 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +185,7 @@
 				DCDB3AEA250E28F60055B1D9 /* RBCameraDocScanTests */,
 				DC64B6182510A54100327BCD /* RBCameraDocScanExample */,
 				DCDB3ADE250E28F60055B1D9 /* Products */,
+				DC7784CF2511D18F00D5DC5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -237,10 +269,12 @@
 				DC64B6132510A54100327BCD /* Sources */,
 				DC64B6142510A54100327BCD /* Frameworks */,
 				DC64B6152510A54100327BCD /* Resources */,
+				DC7784D42511D18F00D5DC5D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DC7784D32511D18F00D5DC5D /* PBXTargetDependency */,
 			);
 			name = RBCameraDocScanExample;
 			productName = RBCameraDocScanExample;
@@ -412,6 +446,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DC7784D32511D18F00D5DC5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCDB3ADC250E28F60055B1D9 /* RBCameraDocScan */;
+			targetProxy = DC7784D22511D18F00D5DC5D /* PBXContainerItemProxy */;
+		};
 		DCDB3AE9250E28F60055B1D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DCDB3ADC250E28F60055B1D9 /* RBCameraDocScan */;
