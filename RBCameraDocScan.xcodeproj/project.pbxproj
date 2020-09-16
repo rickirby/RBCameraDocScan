@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC3BD6EF251215DC00FD8020 /* RBScanImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BD6EE251215DC00FD8020 /* RBScanImagePickerController.swift */; };
 		DC64B5F42510A2D500327BCD /* RBCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B5F32510A2D500327BCD /* RBCameraViewController.swift */; };
 		DC64B61A2510A54100327BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B6192510A54100327BCD /* AppDelegate.swift */; };
 		DC64B61C2510A54100327BCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64B61B2510A54100327BCD /* SceneDelegate.swift */; };
@@ -79,6 +80,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DC3BD6EE251215DC00FD8020 /* RBScanImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBScanImagePickerController.swift; sourceTree = "<group>"; };
 		DC64B5F32510A2D500327BCD /* RBCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBCameraViewController.swift; sourceTree = "<group>"; };
 		DC64B6172510A54100327BCD /* RBCameraDocScanExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RBCameraDocScanExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC64B6192510A54100327BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				DCDB3AE0250E28F60055B1D9 /* RBCameraDocScan.h */,
 				DC64B5F32510A2D500327BCD /* RBCameraViewController.swift */,
 				DC64B62B2510BAA900327BCD /* RBCameraView.swift */,
+				DC3BD6EE251215DC00FD8020 /* RBScanImagePickerController.swift */,
 				DCDB3B23250E40920055B1D9 /* CaptureSession.swift */,
 				DCDB3B25250E40EB0055B1D9 /* CaptureSessionManager.swift */,
 				DCDB3B27250E41140055B1D9 /* RectangleFeaturesFunnel.swift */,
@@ -395,6 +398,7 @@
 				DC64B62E2510BC6700327BCD /* HStack+VStack.swift in Sources */,
 				DCDB3B12250E3CD40055B1D9 /* Error.swift in Sources */,
 				DC64B62C2510BAA900327BCD /* RBCameraView.swift in Sources */,
+				DC3BD6EF251215DC00FD8020 /* RBScanImagePickerController.swift in Sources */,
 				DCDB3B10250E3BBC0055B1D9 /* VisionRectangleDetector.swift in Sources */,
 				DCDB3AFE250E30980055B1D9 /* CornerPosition.swift in Sources */,
 				DCDB3B2C250E41AA0055B1D9 /* ZoomGestureController.swift in Sources */,

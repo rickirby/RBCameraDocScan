@@ -25,6 +25,11 @@ class ViewController: UIViewController {
 		self.present(vc, animated: true, completion: nil)
 	}
 	
+	@IBAction func openPickerButton(_ sender: UIButton) {
+		let vc = RBScanImagePickerController()
+		vc.scanDelegate = self
+		self.present(vc, animated: true, completion: nil)
+	}
 }
 
 extension ViewController: RBCameraViewControllerDelegate {
@@ -42,3 +47,10 @@ extension ViewController: RBCameraViewControllerDelegate {
 	}
 }
 
+extension ViewController: RBScanImagePickerControllerDelegate {
+	func gotPicture(image: UIImage, quad: Quadrilateral?) {
+		resultImageView.image = image
+	}
+	
+	
+}
