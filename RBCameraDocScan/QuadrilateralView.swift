@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class QuadrilateralView: UIView {
+public class QuadrilateralView: UIView {
 	
 	private let quadLayer: CAShapeLayer = {
 		let layer = CAShapeLayer()
@@ -76,7 +76,7 @@ class QuadrilateralView: UIView {
 	
 	// MARK: - Life Cycle
 	
-	override init(frame: CGRect) {
+	public override init(frame: CGRect) {
 		super.init(frame: frame)
 		commonInit()
 	}
@@ -110,7 +110,7 @@ class QuadrilateralView: UIView {
 		addSubview(bottomLeftCornerView)
 	}
 	
-	override public func layoutSubviews() {
+	public override func layoutSubviews() {
 		super.layoutSubviews()
 		guard quadLayer.frame != bounds else {
 			return
@@ -128,7 +128,7 @@ class QuadrilateralView: UIView {
 	///
 	/// - Parameters:
 	///   - quad: The quadrilateral to draw on the view. It should be in the coordinates of the current `QuadrilateralView` instance.
-	func drawQuadrilateral(quad: Quadrilateral, animated: Bool) {
+	public func drawQuadrilateral(quad: Quadrilateral, animated: Bool) {
 		self.quad = quad
 		drawQuad(quad, animated: animated)
 		if editable {
@@ -163,7 +163,7 @@ class QuadrilateralView: UIView {
 		bottomRightCornerView.center = quad.bottomRight
 	}
 	
-	func removeQuadrilateral() {
+	public func removeQuadrilateral() {
 		quadLayer.path = nil
 		quadLayer.isHidden = true
 	}
