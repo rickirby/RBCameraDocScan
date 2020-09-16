@@ -12,7 +12,6 @@ class EditScanCornerView: UIView {
 	
 	let position: CornerPosition
 	
-	/// The image to display when the corner view is highlighted.
 	private var image: UIImage?
 	private(set) var isHighlighted = false
 	

@@ -21,8 +21,6 @@ public class QuadrilateralView: UIView {
 		return layer
 	}()
 	
-	/// We want the corner views to be displayed under the outline of the quadrilateral.
-	/// Because of that, we need the quadrilateral to be drawn on a UIView above them.
 	private let quadView: UIView = {
 		let view = UIView()
 		view.backgroundColor = UIColor.clear
@@ -30,7 +28,6 @@ public class QuadrilateralView: UIView {
 		return view
 	}()
 	
-	/// The quadrilateral drawn on the view.
 	private(set) var quad: Quadrilateral?
 	
 	public var editable = false {
@@ -124,10 +121,6 @@ public class QuadrilateralView: UIView {
 	
 	// MARK: - Drawings
 	
-	/// Draws the passed in quadrilateral.
-	///
-	/// - Parameters:
-	///   - quad: The quadrilateral to draw on the view. It should be in the coordinates of the current `QuadrilateralView` instance.
 	public func drawQuadrilateral(quad: Quadrilateral, animated: Bool) {
 		self.quad = quad
 		drawQuad(quad, animated: animated)
@@ -223,13 +216,6 @@ public class QuadrilateralView: UIView {
 	
 	// MARK: Validation
 	
-	/// Ensures that the given point is valid - meaning that it is within the bounds of the passed in `UIView`.
-	///
-	/// - Parameters:
-	///   - point: The point that needs to be validated.
-	///   - cornerViewSize: The size of the corner view representing the given point.
-	///   - view: The view which should include the point.
-	/// - Returns: A new point which is within the passed in view.
 	private func validPoint(_ point: CGPoint, forCornerViewOfSize cornerViewSize: CGSize, inView view: UIView) -> CGPoint {
 		var validPoint = point
 		
