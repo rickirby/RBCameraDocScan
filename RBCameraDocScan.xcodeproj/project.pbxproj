@@ -30,8 +30,6 @@
 		DCDB3B00250E31280055B1D9 /* CGAffineTransform+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3AFF250E31280055B1D9 /* CGAffineTransform+Extension.swift */; };
 		DCDB3B02250E383F0055B1D9 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B01250E383F0055B1D9 /* UIImage+Extension.swift */; };
 		DCDB3B04250E38990055B1D9 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B03250E38990055B1D9 /* CGSize+Extension.swift */; };
-		DCDB3B06250E393F0055B1D9 /* CameraScannerScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B05250E393F0055B1D9 /* CameraScannerScan.swift */; };
-		DCDB3B08250E39960055B1D9 /* CameraScannerResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B07250E39960055B1D9 /* CameraScannerResults.swift */; };
 		DCDB3B0A250E39C90055B1D9 /* RectangleDetectorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B09250E39C90055B1D9 /* RectangleDetectorResult.swift */; };
 		DCDB3B0C250E3B1C0055B1D9 /* CaptureDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B0B250E3B1C0055B1D9 /* CaptureDevice.swift */; };
 		DCDB3B10250E3BBC0055B1D9 /* VisionRectangleDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB3B0F250E3BBC0055B1D9 /* VisionRectangleDetector.swift */; };
@@ -109,8 +107,6 @@
 		DCDB3AFF250E31280055B1D9 /* CGAffineTransform+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGAffineTransform+Extension.swift"; sourceTree = "<group>"; };
 		DCDB3B01250E383F0055B1D9 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		DCDB3B03250E38990055B1D9 /* CGSize+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
-		DCDB3B05250E393F0055B1D9 /* CameraScannerScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScannerScan.swift; sourceTree = "<group>"; };
-		DCDB3B07250E39960055B1D9 /* CameraScannerResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScannerResults.swift; sourceTree = "<group>"; };
 		DCDB3B09250E39C90055B1D9 /* RectangleDetectorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleDetectorResult.swift; sourceTree = "<group>"; };
 		DCDB3B0B250E3B1C0055B1D9 /* CaptureDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureDevice.swift; sourceTree = "<group>"; };
 		DCDB3B0F250E3BBC0055B1D9 /* VisionRectangleDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionRectangleDetector.swift; sourceTree = "<group>"; };
@@ -215,8 +211,6 @@
 				DC64B62D2510BC6700327BCD /* HStack+VStack.swift */,
 				DCDB3B1F250E3FF90055B1D9 /* QuadrilateralView.swift */,
 				DCDB3AF7250E2EA30055B1D9 /* Quadrilateral.swift */,
-				DCDB3B05250E393F0055B1D9 /* CameraScannerScan.swift */,
-				DCDB3B07250E39960055B1D9 /* CameraScannerResults.swift */,
 				DCDB3B09250E39C90055B1D9 /* RectangleDetectorResult.swift */,
 				DCDB3AFD250E30980055B1D9 /* CornerPosition.swift */,
 				DCDB3B0F250E3BBC0055B1D9 /* VisionRectangleDetector.swift */,
@@ -401,7 +395,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCDB3B08250E39960055B1D9 /* CameraScannerResults.swift in Sources */,
 				DCDB3B24250E40920055B1D9 /* CaptureSession.swift in Sources */,
 				DCDB3AFA250E2F430055B1D9 /* Transformable.swift in Sources */,
 				DCDB3B0A250E39C90055B1D9 /* RectangleDetectorResult.swift in Sources */,
@@ -410,7 +403,6 @@
 				DC64B62C2510BAA900327BCD /* RBCameraView.swift in Sources */,
 				DCDB3B10250E3BBC0055B1D9 /* VisionRectangleDetector.swift in Sources */,
 				DCDB3AFE250E30980055B1D9 /* CornerPosition.swift in Sources */,
-				DCDB3B06250E393F0055B1D9 /* CameraScannerScan.swift in Sources */,
 				DCDB3B2C250E41AA0055B1D9 /* ZoomGestureController.swift in Sources */,
 				DC64B5F42510A2D500327BCD /* RBCameraViewController.swift in Sources */,
 				DCDB3B2A250E41540055B1D9 /* RectangleDetectionDelegateProtocol.swift in Sources */,
