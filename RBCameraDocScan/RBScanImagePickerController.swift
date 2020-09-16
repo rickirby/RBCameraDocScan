@@ -8,7 +8,13 @@
 
 import UIKit
 
+public protocol RBScanImagePickerControllerDelegate {
+	func gotPicture(image: UIImage, quad: Quadrilateral?)
+}
+
 public class RBScanImagePickerController: UIImagePickerController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+	
+	public var scanDelegate: RBScanImagePickerControllerDelegate?
 	
 	public override func viewDidLoad() {
 		super.viewDidLoad()
@@ -19,4 +25,5 @@ public class RBScanImagePickerController: UIImagePickerController, UIImagePicker
 	public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
 		picker.dismiss(animated: true, completion: nil)
 	}
+
 }
