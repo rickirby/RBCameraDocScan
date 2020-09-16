@@ -37,7 +37,7 @@ public struct Quadrilateral: Transformable {
 		return Double(perimeter)
 	}
 	
-	init(rectangleFeature: CIRectangleFeature) {
+	public init(rectangleFeature: CIRectangleFeature) {
 		self.topLeft = rectangleFeature.topLeft
 		self.topRight = rectangleFeature.topRight
 		self.bottomLeft = rectangleFeature.bottomLeft
@@ -45,14 +45,14 @@ public struct Quadrilateral: Transformable {
 	}
 	
 	@available(iOS 11.0, *)
-	init(rectangleObservation: VNRectangleObservation) {
+	public init(rectangleObservation: VNRectangleObservation) {
 		self.topLeft = rectangleObservation.topLeft
 		self.topRight = rectangleObservation.topRight
 		self.bottomLeft = rectangleObservation.bottomLeft
 		self.bottomRight = rectangleObservation.bottomRight
 	}
 	
-	init(topLeft: CGPoint, topRight: CGPoint, bottomRight: CGPoint, bottomLeft: CGPoint) {
+	public init(topLeft: CGPoint, topRight: CGPoint, bottomRight: CGPoint, bottomLeft: CGPoint) {
 		self.topLeft = topLeft
 		self.topRight = topRight
 		self.bottomRight = bottomRight
@@ -90,7 +90,7 @@ public struct Quadrilateral: Transformable {
 		return true
 	}
 	
-	mutating func reorganize() {
+	public mutating func reorganize() {
 		let points = [topLeft, topRight, bottomRight, bottomLeft]
 		let ySortedPoints = sortPointsByYValue(points)
 		
@@ -114,7 +114,7 @@ public struct Quadrilateral: Transformable {
 		bottomLeft = xSortedBottomMostPoints[0]
 	}
 	
-	func scale(_ fromSize: CGSize, _ toSize: CGSize, withRotationAngle rotationAngle: CGFloat = 0.0) -> Quadrilateral {
+	public func scale(_ fromSize: CGSize, _ toSize: CGSize, withRotationAngle rotationAngle: CGFloat = 0.0) -> Quadrilateral {
 		var invertedfromSize = fromSize
 		let rotated = rotationAngle != 0.0
 		
@@ -155,7 +155,7 @@ public struct Quadrilateral: Transformable {
 		}
 	}
 	
-	func toCartesian(withHeight height: CGFloat) -> Quadrilateral {
+	public func toCartesian(withHeight height: CGFloat) -> Quadrilateral {
 		let topLeft = self.topLeft.cartesian(withHeight: height)
 		let topRight = self.topRight.cartesian(withHeight: height)
 		let bottomRight = self.bottomRight.cartesian(withHeight: height)
