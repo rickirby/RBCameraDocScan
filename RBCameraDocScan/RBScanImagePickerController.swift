@@ -16,4 +16,7 @@ public class RBScanImagePickerController: UIImagePickerController, UIImagePicker
 		delegate = self
 	}
 	
+	public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+		picker.dismiss(animated: true, completion: nil)
+	}
 }
