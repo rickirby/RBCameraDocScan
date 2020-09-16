@@ -25,7 +25,7 @@ public struct CameraScannerScan {
 		}
 	}
 	
-	mutating func rotate(by rotationAngle: Measurement<UnitAngle>) {
+	public mutating func rotate(by rotationAngle: Measurement<UnitAngle>) {
 		guard rotationAngle.value != 0, rotationAngle.value != 360 else { return }
 		image = image.rotated(by: rotationAngle) ?? image
 	}

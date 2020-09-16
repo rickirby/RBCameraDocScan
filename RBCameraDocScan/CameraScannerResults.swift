@@ -28,7 +28,7 @@ public struct CameraScannerResults {
 	@available(*, unavailable, renamed: "doesUserPreferEnhancedScan")
 	public var doesUserPreferEnhancedImage: Bool = false
 	
-	init(detectedRectangle: Quadrilateral, originalScan: CameraScannerScan, croppedScan: CameraScannerScan, enhancedScan: CameraScannerScan?, doesUserPreferEnhancedScan: Bool = false) {
+	public init(detectedRectangle: Quadrilateral, originalScan: CameraScannerScan, croppedScan: CameraScannerScan, enhancedScan: CameraScannerScan?, doesUserPreferEnhancedScan: Bool = false) {
 		self.detectedRectangle = detectedRectangle
 		
 		self.originalScan = originalScan
