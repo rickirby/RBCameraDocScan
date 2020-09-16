@@ -10,9 +10,9 @@ import UIKit
 import AVFoundation
 
 public protocol RBCameraViewControllerDelegate {
-	func gotCapturedPicture(image: UIImage, quad: Quadrilateral?)
-	func didTapCancel()
-	func didTapImagePick()
+	func gotCapturedPicture(on target: UIViewController, image: UIImage, quad: Quadrilateral?)
+	func didTapCancel(on target: UIViewController)
+	func didTapImagePick(on target: UIViewController)
 }
 
 public class RBCameraViewController: UIViewController {
@@ -96,9 +96,9 @@ public class RBCameraViewController: UIViewController {
 			case .capture:
 				self?.captureSessionManager?.capturePhoto()
 			case .didTapCancel:
-				self?.delegate?.didTapCancel()
+				self?.delegate?.didTapCancel(on: self ?? UIViewController())
 			case .didTapImagePick:
-				self?.delegate?.didTapImagePick()
+				self?.delegate?.didTapImagePick(on: self ?? UIViewController())
 			case .setFlash(let state):
 				CaptureSession.current.setFlash(into: state)
 			case .toggleAutomatic:
@@ -189,7 +189,7 @@ extension RBCameraViewController: RectangleDetectionDelegateProtocol {
 			CaptureSession.current.setFlash(into: .off)
 		}
 		
-		delegate?.gotCapturedPicture(image: picture, quad: quad)
+		delegate?.gotCapturedPicture(on: self, image: picture, quad: quad)
 	}
 	
 	func captureSessionManager(_ captureSessionManager: CaptureSessionManager, didFailWithError error: Error) {
