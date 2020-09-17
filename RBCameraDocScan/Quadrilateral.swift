@@ -59,7 +59,7 @@ public struct Quadrilateral: Transformable {
 		self.bottomLeft = bottomLeft
 	}
 	
-	func applying(_ transform: CGAffineTransform) -> Quadrilateral {
+	public func applying(_ transform: CGAffineTransform) -> Quadrilateral {
 		let quadrilateral = Quadrilateral(topLeft: topLeft.applying(transform), topRight: topRight.applying(transform), bottomRight: bottomRight.applying(transform), bottomLeft: bottomLeft.applying(transform))
 		
 		return quadrilateral
