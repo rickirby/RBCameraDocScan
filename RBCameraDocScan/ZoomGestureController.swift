@@ -21,7 +21,7 @@ public final class ZoomGestureController {
 		self.quadView = quadView
 	}
 	
-	@objc func handle(pan: UIGestureRecognizer) {
+	@objc public func handle(pan: UIGestureRecognizer) {
 		guard let drawnQuad = quadView.quad else {
 			return
 		}
