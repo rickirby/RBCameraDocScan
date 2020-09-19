@@ -23,6 +23,12 @@ public final class ZoomGestureController {
 		self.quadView = quadView
 	}
 	
+	public func configure(on view: UIView) {
+		let touchDown = UILongPressGestureRecognizer(target: self, action: #selector(handle(pan:)))
+		touchDown.minimumPressDuration = 0
+		view.addGestureRecognizer(touchDown)
+	}
+	
 	@objc public func handle(pan: UIGestureRecognizer) {
 		guard let drawnQuad = quadView.quad else {
 			return
