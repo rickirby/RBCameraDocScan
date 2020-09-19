@@ -11,15 +11,15 @@ import AVFoundation
 
 public final class ZoomGestureController {
 	
+	public var onUpdateQuad: ((Quadrilateral?) -> Void)?
+	
 	private let image: UIImage
-	private var quad: Quadrilateral?
 	private let quadView: QuadrilateralView
 	private var previousPanPosition: CGPoint?
 	private var closestCorner: CornerPosition?
 	
-	public init(image: UIImage, quad: Quadrilateral?, quadView: QuadrilateralView) {
+	public init(image: UIImage, quadView: QuadrilateralView) {
 		self.image = image
-		self.quad = quad
 		self.quadView = quadView
 	}
 	
@@ -63,7 +63,8 @@ public final class ZoomGestureController {
 		
 		quadView.highlightCornerAtPosition(position: closestCorner, with: zoomedImage)
 		
-		quad = quadView.quad?.scale(quadView.bounds.size, image.size)
+		let quad = quadView.quad?.scale(quadView.bounds.size, image.size)
+		onUpdateQuad?(quad)
 	}
 	
 }
