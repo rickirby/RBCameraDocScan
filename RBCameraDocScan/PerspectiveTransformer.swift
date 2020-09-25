@@ -31,9 +31,8 @@ public class PerspectiveTransformer {
 		
 		if let output = perspective.outputImage {
 			if let cgimg = context.createCGImage(output, from: output.extent) {
-				let processedImage = UIImage(cgImage: cgimg)
 				
-				return processedImage
+				return UIImage(cgImage: cgimg)
 			}
 		}
 		
