@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreImage
+import CoreImage.CIFilterBuiltins
 
 public class PerspectiveTransformer {
 	
@@ -19,14 +21,22 @@ public class PerspectiveTransformer {
 		var cartesianScaledQuad = quad.toCartesian(withHeight: image.size.height)
 		cartesianScaledQuad.reorganize()
 		
-		let filteredImage = orientedImage.applyingFilter("CIPerspectiveCorrection", parameters: [
-			"inputTopLeft": CIVector(cgPoint: cartesianScaledQuad.bottomLeft),
-			"inputTopRight": CIVector(cgPoint: cartesianScaledQuad.bottomRight),
-			"inputBottomLeft": CIVector(cgPoint: cartesianScaledQuad.topLeft),
-			"inputBottomRight": CIVector(cgPoint: cartesianScaledQuad.topRight)
-			])
+		let context = CIContext(options: nil)
+		let perspective = CIFilter.perspectiveCorrection()
+		perspective.inputImage = orientedImage
+		perspective.topLeft = cartesianScaledQuad.bottomLeft
+		perspective.topRight = cartesianScaledQuad.bottomRight
+		perspective.bottomRight = cartesianScaledQuad.topRight
+		perspective.bottomLeft = cartesianScaledQuad.topLeft
 		
-		return UIImage.from(ciImage: filteredImage)
+		if let output = perspective.outputImage {
+			if let cgimg = context.createCGImage(output, from: output.extent) {
+				
+				return UIImage(cgImage: cgimg)
+			}
+		}
+		
+		return UIImage()
 	}
 	
 }
