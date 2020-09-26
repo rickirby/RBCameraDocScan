@@ -76,7 +76,7 @@ class RBCameraView: UIView {
 	lazy var captureButton: UIButton = {
 		let button = UIButton()
 		button.translatesAutoresizingMaskIntoConstraints = false
-		button.setImage(UIImage(named: "CaptureButton"), for: .normal)
+		button.setImage(UIImage(named: "RBCameraDocScan.bundle/CaptureButton.png"), for: .normal)
 		button.addTarget(self, action: #selector(captureButtonTapped), for: .touchUpInside)
 		
 		return button
@@ -85,7 +85,7 @@ class RBCameraView: UIView {
 	lazy var cancelButton: UIButton = {
 		let button = UIButton()
 		button.translatesAutoresizingMaskIntoConstraints = false
-		button.setImage(UIImage(named: "CancelButton"), for: .normal)
+		button.setImage(UIImage(named: "RBCameraDocScan.bundle/CancelButton.png"), for: .normal)
 		button.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
 		
 		return button
@@ -94,7 +94,7 @@ class RBCameraView: UIView {
 	lazy var imagePickButton: UIButton = {
 		let button = UIButton()
 		button.translatesAutoresizingMaskIntoConstraints = false
-		button.setImage(UIImage(named: "ImagePickButton"), for: .normal)
+		button.setImage(UIImage(named: "RBCameraDocScan.bundle/ImagePickButton.png"), for: .normal)
 		button.addTarget(self, action: #selector(imagePickButtonTapped), for: .touchUpInside)
 		
 		return button
@@ -103,7 +103,7 @@ class RBCameraView: UIView {
 	lazy var flashButton: UIButton = {
 		let button = UIButton()
 		button.translatesAutoresizingMaskIntoConstraints = false
-		button.setImage(UIImage(named: "FlashOffButton"), for: .normal)
+		button.setImage(UIImage(named: "RBCameraDocScan.bundle/FlashOffButton.png"), for: .normal)
 		button.imageView?.contentMode = .scaleAspectFit
 		button.addTarget(self, action: #selector(flashButtonTapped), for: .touchUpInside)
 		
@@ -113,7 +113,7 @@ class RBCameraView: UIView {
 	lazy var automaticButton: UIButton = {
 		let button = UIButton()
 		button.translatesAutoresizingMaskIntoConstraints = false
-		button.setImage(UIImage(named: "AutomaticButton")?.withRenderingMode(.alwaysTemplate), for: .normal)
+		button.setImage(UIImage(named: "RBCameraDocScan.bundle/AutomaticButton.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
 		button.tintColor = .white
 		button.addTarget(self, action: #selector(automaticButtonTapped), for: .touchUpInside)
 		
@@ -145,7 +145,7 @@ class RBCameraView: UIView {
 	lazy var currentFlashImageView: UIImageView = {
 		let imageView = UIImageView()
 		imageView.translatesAutoresizingMaskIntoConstraints = false
-		imageView.image = UIImage(named: "FlashOnButton")?.withRenderingMode(.alwaysTemplate)
+		imageView.image = UIImage(named: "RBCameraDocScan.bundle/FlashOnButton.png")?.withRenderingMode(.alwaysTemplate)
 		imageView.tintColor = .black
 		imageView.contentMode = .scaleAspectFit
 		
@@ -301,14 +301,14 @@ class RBCameraView: UIView {
 	func setFlashButtonImage(into state: FlashState) {
 		switch state {
 		case .off:
-			flashButton.setImage(UIImage(named: "FlashOffButton"), for: .normal)
+			flashButton.setImage(UIImage(named: "RBCameraDocScan.bundle/FlashOffButton.png"), for: .normal)
 			UIView.animate(withDuration: 0.25, animations: {
 				self.currentFlashView.alpha = 0
 				self.currentFlashView.isHidden = true
 			})
 			break
 		case .on:
-			flashButton.setImage(UIImage(named: "FlashOnButton")?.withRenderingMode(.alwaysTemplate), for: .normal)
+			flashButton.setImage(UIImage(named: "RBCameraDocScan.bundle/FlashOnButton.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
 			flashButton.tintColor = UIColor(red: 255/255, green: 214/255, blue: 10/255, alpha: 1)
 			UIView.animate(withDuration: 0.25, animations: {
 				self.currentFlashImageView.image = UIImage(named: "FlashOnButton")?.withRenderingMode(.alwaysTemplate)
@@ -317,7 +317,7 @@ class RBCameraView: UIView {
 			})
 			break
 		case .torch:
-			flashButton.setImage(UIImage(named: "TorchButton")?.withRenderingMode(.alwaysTemplate), for: .normal)
+			flashButton.setImage(UIImage(named: "RBCameraDocScan.bundle/TorchButton.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
 			flashButton.tintColor = UIColor(red: 255/255, green: 214/255, blue: 10/255, alpha: 1)
 			UIView.animate(withDuration: 0.25, animations: {
 				self.currentFlashImageView.image = UIImage(named: "TorchButton")?.withRenderingMode(.alwaysTemplate)

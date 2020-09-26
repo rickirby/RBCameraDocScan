@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol Transformable {
+public protocol Transformable {
 	func applying(_ transform: CGAffineTransform) -> Self
 }
 
-extension Transformable {
+public extension Transformable {
 	func applyTransforms(_ transforms: [CGAffineTransform]) -> Self {
 		
 		var transformableObject = self

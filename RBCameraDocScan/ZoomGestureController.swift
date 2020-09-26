@@ -11,6 +11,8 @@ import AVFoundation
 
 public final class ZoomGestureController {
 	
+	public var onUpdateQuad: ((Quadrilateral?) -> Void)?
+	
 	private let image: UIImage
 	private let quadView: QuadrilateralView
 	private var previousPanPosition: CGPoint?
@@ -21,7 +23,13 @@ public final class ZoomGestureController {
 		self.quadView = quadView
 	}
 	
-	@objc func handle(pan: UIGestureRecognizer) {
+	public func configure(on view: UIView) {
+		let touchDown = UILongPressGestureRecognizer(target: self, action: #selector(handle(pan:)))
+		touchDown.minimumPressDuration = 0
+		view.addGestureRecognizer(touchDown)
+	}
+	
+	@objc public func handle(pan: UIGestureRecognizer) {
 		guard let drawnQuad = quadView.quad else {
 			return
 		}
@@ -54,6 +62,9 @@ public final class ZoomGestureController {
 		}
 		
 		quadView.highlightCornerAtPosition(position: closestCorner, with: zoomedImage)
+		
+		let quad = quadView.quad?.scale(quadView.bounds.size, image.size)
+		onUpdateQuad?(quad)
 	}
 	
 }

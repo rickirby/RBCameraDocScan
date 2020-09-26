@@ -196,43 +196,48 @@ extension CaptureSessionManager: AVCapturePhotoCaptureDelegate {
 	
 	// swiftlint:disable function_parameter_count
 	func photoOutput(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
-		if let error = error {
-			delegate?.captureSessionManager(self, didFailWithError: error)
-			return
+		
+		autoreleasepool {
+			if let error = error {
+				delegate?.captureSessionManager(self, didFailWithError: error)
+				return
+			}
+			
+			isDetecting = false
+			rectangleFunnel.currentAutoScanPassCount = 0
+			delegate?.didStartCapturingPicture(for: self)
+			
+			if let sampleBuffer = photoSampleBuffer,
+				let imageData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: nil) {
+				completeImageCapture(with: imageData)
+			} else {
+				let error = CameraScannerControllerError.capture
+				delegate?.captureSessionManager(self, didFailWithError: error)
+				return
+			}
 		}
-		
-		isDetecting = false
-		rectangleFunnel.currentAutoScanPassCount = 0
-		delegate?.didStartCapturingPicture(for: self)
-		
-		if let sampleBuffer = photoSampleBuffer,
-			let imageData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: nil) {
-			completeImageCapture(with: imageData)
-		} else {
-			let error = CameraScannerControllerError.capture
-			delegate?.captureSessionManager(self, didFailWithError: error)
-			return
-		}
-		
 	}
 	
 	@available(iOS 11.0, *)
 	func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-		if let error = error {
-			delegate?.captureSessionManager(self, didFailWithError: error)
-			return
-		}
 		
-		isDetecting = false
-		rectangleFunnel.currentAutoScanPassCount = 0
-		delegate?.didStartCapturingPicture(for: self)
-		
-		if let imageData = photo.fileDataRepresentation() {
-			completeImageCapture(with: imageData)
-		} else {
-			let error = CameraScannerControllerError.capture
-			delegate?.captureSessionManager(self, didFailWithError: error)
-			return
+		autoreleasepool {
+			if let error = error {
+				delegate?.captureSessionManager(self, didFailWithError: error)
+				return
+			}
+			
+			isDetecting = false
+			rectangleFunnel.currentAutoScanPassCount = 0
+			delegate?.didStartCapturingPicture(for: self)
+			
+			if let imageData = photo.fileDataRepresentation() {
+				completeImageCapture(with: imageData)
+			} else {
+				let error = CameraScannerControllerError.capture
+				delegate?.captureSessionManager(self, didFailWithError: error)
+				return
+			}
 		}
 	}
 	
