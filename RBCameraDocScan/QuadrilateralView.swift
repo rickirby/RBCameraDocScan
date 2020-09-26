@@ -28,7 +28,7 @@ public class QuadrilateralView: UIView {
 		return view
 	}()
 	
-	private(set) var quad: Quadrilateral?
+	public var quad: Quadrilateral?
 	
 	public var editable = false {
 		didSet {
