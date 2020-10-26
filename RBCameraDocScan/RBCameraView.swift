@@ -311,7 +311,7 @@ class RBCameraView: UIView {
 			flashButton.setImage(UIImage(named: "RBCameraDocScan.bundle/FlashOnButton.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
 			flashButton.tintColor = UIColor(red: 255/255, green: 214/255, blue: 10/255, alpha: 1)
 			UIView.animate(withDuration: 0.25, animations: {
-				self.currentFlashImageView.image = UIImage(named: "FlashOnButton")?.withRenderingMode(.alwaysTemplate)
+				self.currentFlashImageView.image = UIImage(named: "RBCameraDocScan.bundle/FlashOnButton")?.withRenderingMode(.alwaysTemplate)
 				self.currentFlashView.alpha = 1
 				self.currentFlashView.isHidden = false
 			})
@@ -320,7 +320,7 @@ class RBCameraView: UIView {
 			flashButton.setImage(UIImage(named: "RBCameraDocScan.bundle/TorchButton.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
 			flashButton.tintColor = UIColor(red: 255/255, green: 214/255, blue: 10/255, alpha: 1)
 			UIView.animate(withDuration: 0.25, animations: {
-				self.currentFlashImageView.image = UIImage(named: "TorchButton")?.withRenderingMode(.alwaysTemplate)
+				self.currentFlashImageView.image = UIImage(named: "RBCameraDocScan.bundle/TorchButton")?.withRenderingMode(.alwaysTemplate)
 				self.currentFlashView.alpha = 1
 				self.currentFlashView.isHidden = false
 			})
