@@ -12,4 +12,4 @@ Then "carthage update --use-ssh"
 Also this project has resources bundle, so that add the bundle into "Copy Bundle Resources" inside Build Phases
 
 ### Current version:
-0.0.2
+0.0.3
