@@ -247,16 +247,17 @@ class RBCameraView: UIView {
 			automaticButton.heightAnchor.constraint(equalToConstant: CGFloat(21.75).makeDynamicW()),
 			
 			currentAutomaticLabel.leftAnchor.constraint(equalTo: currentAutomaticView.leftAnchor, constant: 10),
-			currentAutomaticView.rightAnchor.constraint(equalTo: currentAutomaticLabel.rightAnchor, constant: 10),
+			currentAutomaticLabel.rightAnchor.constraint(equalTo: currentAutomaticView.rightAnchor, constant: -10),
 			currentAutomaticLabel.topAnchor.constraint(equalTo: currentAutomaticView.topAnchor, constant: 3),
 			currentAutomaticLabel.bottomAnchor.constraint(equalTo: currentAutomaticView.bottomAnchor, constant: -3),
+			currentAutomaticLabel.heightAnchor.constraint(equalToConstant: 20),
 			
 			currentFlashView.heightAnchor.constraint(equalTo: currentAutomaticView.heightAnchor),
 			
-			currentFlashImageView.topAnchor.constraint(equalTo: currentFlashView.topAnchor, constant: CGFloat(5).makeDynamicH()),
-			currentFlashImageView.bottomAnchor.constraint(equalTo: currentFlashView.bottomAnchor, constant: CGFloat(-5).makeDynamicH()),
-			currentFlashImageView.leftAnchor.constraint(equalTo: currentFlashView.leftAnchor, constant: CGFloat(10).makeDynamicW()),
-			currentFlashImageView.rightAnchor.constraint(equalTo: currentFlashView.rightAnchor, constant: CGFloat(-10).makeDynamicW()),
+			currentFlashImageView.topAnchor.constraint(equalTo: currentFlashView.topAnchor, constant: 5),
+			currentFlashImageView.bottomAnchor.constraint(equalTo: currentFlashView.bottomAnchor, constant: -5),
+			currentFlashImageView.leftAnchor.constraint(equalTo: currentFlashView.leftAnchor, constant: 10),
+			currentFlashImageView.rightAnchor.constraint(equalTo: currentFlashView.rightAnchor, constant: -10),
 			currentFlashImageView.widthAnchor.constraint(equalToConstant: 35),
 			
 			hStack.centerXAnchor.constraint(equalTo: topMaskView.centerXAnchor),
