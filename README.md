@@ -1,15 +1,17 @@
-# RB_CameraDocScan_Core_iOS
-Camera Scanner and Document Scanner Algorithm
+# RBCameraDocScan
+Framework for document scanner using camera
 
-
-### How to use:
 on Cartfile, add following lines:
 
-git "git@bitbucket.org:rb-scando/rb_cameradocscan_core_ios.git" == *version-number*
+```
+github "rickirby/RBCameraDocScan" == 0.0.3
+```
 
-Then "carthage update --use-ssh"
+Then execute "carthage update --platform iOS" on terminal
 
-Also this project has resources bundle, so that add the bundle into "Copy Bundle Resources" inside Build Phases
+Follow [this tutorial](https://www.raywenderlich.com/7649117-carthage-tutorial-getting-started) for adding carthage-generated framework to the project
+
+Also this framework has resources bundle. Don't forget to add the bundle into "Copy Bundle Resources" inside Build Phases
 
 ### Current version:
 0.0.3
